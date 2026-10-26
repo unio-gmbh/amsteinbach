@@ -1,0 +1,13 @@
+{
+  "name": "am-steinbach",
+  "private": true,
+  "description": "Projekt-Landingpage Am Steinbach, Berggasse 17-19, 3001 Mauerbach",
+  "scripts": {
+    "build": "esbuild assets/css/style.css --minify --outfile=assets/css/style.min.css && esbuild assets/js/main.js --minify --target=es2019 --outfile=assets/js/main.min.js",
+    "images": "python3 tools/images.py",
+    "faq": "python3 tools/faq.py"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2"
+  }
+}

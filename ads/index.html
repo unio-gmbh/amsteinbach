@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Am Steinbach Meta-Sujets</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: Canvas nach der Immobilien Meta-Ads Masterstrategie (wie Am Waldrain, Zimmermannplatz 6). Eine Zeile pro Batch, je Sujet 4:5 und 9:16, Copy in drei Ebenen darunter. */
+@font-face { font-family: "AvantGarde"; src: url("../assets/fonts/URWGothic-Book.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "AvantGarde"; src: url("../assets/fonts/URWGothic-Demi.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant"; src: url("../assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+:root {
+  --bg: #f4f3ef; --surface: #ffffff; --fg: #111418; --muted: #67625b; --line: #dcd8d0; --accent: #1d2620; --chip: #ebe5da;
+  --ad-paper: #ffffff; --ad-field: #f3efe8; --ad-stone: #6c685f; --ad-navy: #1d2620; --ad-ink: #111418; --ad-larch: #8a5b38;
+  --serif: "Cormorant", "Cormorant Garamond", Garamond, Georgia, serif;
+  --sans: "AvantGarde", "URW Gothic", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #111511; --surface: #1a201c; --fg: #eef0f2; --muted: #9aa3ad; --line: #2c352f; --accent: #d9cdb8; --chip: #26302a; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #111511; --surface: #1a201c; --fg: #eef0f2; --muted: #9aa3ad; --line: #2c352f; --accent: #d9cdb8; --chip: #26302a; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 72px; }
+h1, h2, h3, .card__top h4 { font-variant-numeric: lining-nums; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; text-wrap: balance; margin: 0; }
+.lbl { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.intro { display: grid; gap: 24px; margin-bottom: 40px; }
+.intro h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.04; }
+.intro h1 em { font-style: italic; }
+.intro p { max-width: 72ch; margin: 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.grid > div { background: var(--surface); padding: 20px 22px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.grid h3 { font-size: 21px; }
+.grid p, .grid li { margin: 0; font-size: 14px; color: var(--muted); }
+.grid ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.grid b { color: var(--fg); font-weight: 600; }
+.tbl { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+.tbl table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+.tbl th, .tbl td { text-align: left; padding: 10px 14px; vertical-align: top; }
+.tbl th { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.tbl tr + tr td { border-top: 1px solid var(--line); }
+.tbl td:first-child { font-weight: 600; white-space: nowrap; }
+
+.batch { margin-top: 64px; display: grid; gap: 22px; }
+.batch__head { display: grid; gap: 10px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.batch__head h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.08; }
+.batch__head h2 em { font-style: italic; }
+.batch__head p { margin: 0; max-width: 84ch; color: var(--muted); }
+.code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; background: var(--chip); padding: 2px 7px; border-radius: 3px; overflow-wrap: anywhere; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 560px), 1fr)); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.card__top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.card__top h4 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: 22px; }
+.pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: var(--chip); color: var(--fg); white-space: nowrap; }
+.frames { display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap; }
+.thumb { --s: .2963; display: grid; gap: 6px; }
+.thumb button { all: unset; cursor: zoom-in; display: block; width: calc(1080px * var(--s)); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.08); }
+.thumb button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.thumb .h45 { height: calc(1350px * var(--s)); }
+.thumb .h916 { height: calc(1920px * var(--s)); }
+.thumb .ad { transform: scale(var(--s)); transform-origin: top left; }
+.thumb.t916 { --s: .2083; }
+@media (max-width: 640px) { .thumb { --s: .24 } .thumb.t916 { --s: .17 } }
+@media (max-width: 400px) { .thumb { --s: .2 } .thumb.t916 { --s: .14 } }
+.copy { display: grid; gap: 10px; margin: 0; }
+.copy div { display: grid; grid-template-columns: 112px 1fr; gap: 12px; min-width: 0; }
+.copy dt { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.copy dd { margin: 0; min-width: 0; font-size: 14px; }
+.copy .flag { color: #a4521c; }
+@media (max-width: 520px) { .copy div { grid-template-columns: 1fr; gap: 2px } }
+.section { margin-top: 64px; display: grid; gap: 16px; }
+.section h2 { font-size: 32px; }
+.section ol { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 84ch; }
+
+.lb { position: fixed; inset: 0; z-index: 50; background: rgba(8,10,12,.86); display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.lb__box { overflow: hidden; }
+.lb__box .ad { transform-origin: top left; }
+.lb__close { position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px)); background: #fff; color: #111; border: 0; border-radius: 99px; padding: 8px 14px; font: 600 13px var(--sans); cursor: pointer; }
+
+/* ---------- Sujets, 1080 px Raster ---------- */
+.ad { position: relative; width: 1080px; overflow: hidden; font-family: var(--sans); color: #fff; background: var(--ad-navy); --pad: 72px; }
+.ad.f45 { height: 1350px; }
+.ad.f916 { height: 1920px; }
+.ad * { box-sizing: border-box; }
+.ad img.ph { position: absolute; display: block; object-fit: cover; max-width: none; }
+.ad .hl { font-variant-numeric: lining-nums; font-family: var(--serif); font-weight: 500; margin: 0; line-height: 1.02; letter-spacing: -.005em; white-space: nowrap; width: 100%; }
+.ad .sub { margin: 0; font-size: 33px; line-height: 1.36; text-wrap: pretty; }
+.ad .anker { font-size: 22px; letter-spacing: .2em; text-transform: uppercase; display: flex; align-items: center; gap: 18px; }
+.ad .anker::before { content: ""; width: 44px; height: 2px; background: currentColor; opacity: .7; }
+.ad .logo { display: flex; align-items: center; gap: 16px; }
+.ad .logo svg { height: 46px; width: auto; fill: currentColor; }
+.ad .logo b { display: block; font-weight: 400; font-size: 24px; letter-spacing: .22em; text-transform: uppercase; line-height: 1; }
+.ad .logo small { display: block; margin-top: 8px; font-size: 15px; letter-spacing: .2em; text-transform: uppercase; opacity: .78; line-height: 1; }
+.ad .vk { display: grid; justify-items: end; gap: 6px; text-align: right; font-size: 17px; letter-spacing: .03em; line-height: 1.3; }
+.ad .vk .pw { display: flex; align-items: center; gap: 10px; }
+.ad .vk .pw img { height: 28px; width: auto; display: block; }
+.ad .vk .legal { opacity: .8; font-size: 15px; }
+.ad .foot { position: absolute; left: var(--pad); right: var(--pad); display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; z-index: 3; }
+
+/* L1 Vollbild, Schleier, Headline oben, Logo unten links, Vertrieb unten rechts */
+.L1 img.ph.main { inset: 0; width: 100%; height: 100%; }
+.L1 .veil { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(14,20,16,.76) 0%, rgba(14,20,16,.6) 36%, rgba(14,20,16,.3) 60%, rgba(14,20,16,.64) 100%); }
+.L1 .txt { position: absolute; left: var(--pad); right: var(--pad); z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; justify-items: start; }
+.L1 .hl { font-size: 104px; }
+.L1 .sub { max-width: 900px; color: rgba(255,255,255,.94); }
+.L1.f45 .txt { top: 104px; }
+.L1.f45 .foot { bottom: 54px; }
+.L1.f916 .txt { top: 300px; gap: 32px; }
+.L1.f916 .hl { font-size: 108px; }
+.L1.f916 .sub { font-size: 36px; }
+.L1.f916 .foot { bottom: 404px; }
+.L1.f916 .veil { background: linear-gradient(180deg, rgba(14,20,16,.74) 0%, rgba(14,20,16,.6) 46%, rgba(14,20,16,.3) 62%, rgba(14,20,16,.6) 82%, rgba(14,20,16,.5) 100%); }
+/* L1+ Einsatzbild im unteren Drittel, immer Außenraum */
+.L1 .inset { position: absolute; left: var(--pad); z-index: 2; border: 8px solid #fff; object-fit: cover; display: block; max-width: none; }
+.L1.f45 .inset { width: 560px; height: 340px; bottom: 170px; }
+.L1.f916 .inset { width: 660px; height: 400px; bottom: 540px; }
+
+/* L2 Bild, Textfeld, Bild */
+.L2 { background: var(--ad-field); color: var(--ad-navy); }
+.L2 img.ph.main { left: 0; top: 0; width: 100%; }
+.L2 img.ph.sec { left: 40px; right: 40px; width: calc(100% - 80px); }
+.L2 .field { position: absolute; left: var(--pad); right: var(--pad); display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; justify-items: start; z-index: 2; }
+.L2 .logo svg { height: 42px; }
+.L2 .logo b { font-size: 21px; }
+.L2 .logo small { font-size: 13px; }
+.L2 .hl { font-size: 82px; }
+.L2 .sub { font-size: 30px; color: #2e352f; }
+.L2 .anker { color: var(--ad-larch); }
+.L2 .row { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.L2 .vk { color: var(--ad-stone); }
+.L2.f45 img.ph.main { height: 470px; }
+.L2.f45 .field { top: 508px; }
+.L2.f45 img.ph.sec { bottom: 40px; height: 370px; }
+.L2.f916 img.ph.main { height: 800px; }
+.L2.f916 .field { top: 846px; gap: 28px; }
+.L2.f916 .hl { font-size: 96px; }
+.L2.f916 .sub { font-size: 34px; }
+.L2.f916 img.ph.sec { bottom: 0; height: 560px; }
+.L2 .vk .legal { opacity: 1; }
+</style>
+
+<main class="wrap">
+  <header class="intro">
+    <span class="lbl">Am Steinbach · Marcus Weiss powered by UNIO · Meta Lead Ads · Statics · Entwurf zur Freigabe · Stand 26.10.2026</span>
+    <h1>Am Steinbach, <em>15 Sujets in 3 Batches</em></h1>
+    <p>Aufgebaut nach der Immobilien Meta-Ads Masterstrategie, so wie bei Am Waldrain, Zimmermannplatz 6 und Am Wolfersberg. Sinus-Milieus werden zu drei Zielgruppen, jede Zielgruppe bekommt einen Batch mit 5 Sujets. Jedes Sujet hat drei Ebenen: Die Headline stoppt, die Subline beweist mit mindestens zwei Zahlen, der Anker verankert. Jedes Sujet gibt es als Paar in 4:5 und 9:16, immer mit Bild, ohne Badge, in Sie-Form und ohne Ausrufezeichen. Antippen vergrößert ein Sujet.</p>
+    <div class="grid">
+      <div><span class="lbl">Was das Projekt stark macht</span><ul><li>Freistehendes Einfamilienhaus auf eigenem Bauplatz mit 930 bzw. 950 m²</li><li>187 m² auf zwei Ebenen, drei Terrassen mit zusammen 92 m²</li><li>Am Wienerwald, Bus 170 m, Wiener Stadtgrenze rund 1 km</li><li>Lärchenholz, Wärmepumpe, PV und Gründach geplant</li></ul></div>
+      <div><span class="lbl">Layouts</span><ul><li><b>L1 Vollbild:</b> Rendering randlos mit Schleier, Headline oben, Logo unten links</li><li><b>L1+:</b> wie L1, dazu Einsatzbild im unteren Drittel, immer Außenraum</li><li><b>L2:</b> Bild oben, Textfeld mit Serif-Headline, Bild unten mit Rand</li></ul></div>
+      <div><span class="lbl">Pflichtangaben</span><ul><li>Auf dem Sujet: nur Logo, Headline, Subline, Anker, Bilder</li><li>Im Primärtext am Ende: HWB und fGEE, <b>Werte fehlen noch</b> (kein Energieausweis, siehe offene Punkte)</li><li>In der Beschreibung: Verkauf durch Marcus Weiss, powered by UNIO</li></ul></div>
+    </div>
+  </header>
+
+  <section class="section" style="margin-top:0">
+    <h2>Sinus-Milieus und Zielgruppen</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Zielgruppe</th><th>Milieus</th><th>Wer, in welcher Situation</th><th>Hauptbotschaft</th><th>Batch</th></tr></thead>
+      <tbody>
+        <tr><td>Familie</td><td>Performer, Konservativ-Etablierte mit Eigenmitteln</td><td>Paare mit Kindern, 35 bis 50, heute in Wohnung oder Reihenhaus in Wien West, Arbeit in Wien. Suchen aktiv ein freistehendes Haus mit Garten nah an der Stadt.</td><td>Ein freistehendes Haus auf eigenem Grund, 1 km vor Wien.</td><td>1, BOF, Such-Match (Master)</td></tr>
+        <tr><td>Natur</td><td>Postmaterielle, ergänzend Liberal-Intellektuelle</td><td>40 bis 60, naturverbunden und architekturaffin, wollen Holz, Wald und Energie belegt sehen statt grüner Worte.</td><td>Lärche, Wiese, Wienerwald, Wärmepumpe und Photovoltaik.</td><td>2, MOF, Staccato</td></tr>
+        <tr><td>Performer</td><td>Performer, Expeditive</td><td>35 bis 50, beruflich stark eingebunden, arbeiten oft zuhause, rechnen genau. Wollen Raum und Abstand, ohne Baustelle in Eigenregie.</td><td>Freistehend, mit Büro und eigenem Bad je Zimmer, ohne selbst zu bauen.</td><td>3, MOF, Kategorie-Bruch</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <div id="batches"></div>
+
+  <section class="section">
+    <h2>Lead-Formular „Unterlagen Am Steinbach“</h2>
+    <div class="tbl"><table>
+      <tbody>
+        <tr><td>Typ</td><td>Höheres Interesse mit Überprüfungsschritt, Telefon Pflicht, kein Link außer Datenschutz</td></tr>
+        <tr><td>Intro</td><td>Pläne, Flächen und Preise der zwei Einfamilienhäuser in Mauerbach. Marcus Weiss meldet sich persönlich bei Ihnen.</td></tr>
+        <tr><td>Frage 1</td><td>Welches Haus interessiert Sie? Haus 1 (950 m² Grund), Haus 2 (930 m² Grund), beide</td></tr>
+        <tr><td>Frage 2</td><td>Kaufen Sie zum Selbstbewohnen oder als Anlage?</td></tr>
+        <tr><td>Frage 3</td><td>Ist die Finanzierung geklärt? Ja, in Klärung, noch offen</td></tr>
+        <tr><td>Frage 4</td><td>Wann möchten Sie einziehen? In 12 Monaten, in 24 Monaten, später</td></tr>
+        <tr><td>Abschluss</td><td>Danke. Wir senden Ihnen die Unterlagen und melden uns persönlich. Button: Zur Projektseite</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="section">
+    <h2>Setup und offene Punkte</h2>
+    <ol>
+      <li><b>Kampagne:</b> eine Testing-Kampagne mit Advantage-Kampagnenbudget, je Batch eine Anzeigengruppe mit 5 Sujets, breit (Advantage+ Zielgruppe), Wien und 40 km um Mauerbach. Gewinner bleiben, Verlierer nach 14 Tagen raus. Batch 1 startet zuerst, weil der Master Lead-Signal liefert.</li>
+      <li><b>Budget:</b> Laut Angebot 2026-180901 empfohlener Ad Spend ab 1.000 € pro Monat, damit läuft ein Batch zur Zeit im 14-Tage-Takt. Ziel-CPA nach 4 Wochen aus den eigenen Daten.</li>
+      <li><b>Energieausweis:</b> Es gibt noch keinen. Die Primärtexte enden mit dem Platzhalter „HWB [folgt] kWh/m²a, fGEE [folgt].“ Vor dem Start die Werte aus dem Energieausweis eintragen. Die Vorabschätzung des Planers (HWB ca. 24 bis 27, fGEE ca. 0,50 bis 0,56) ist kein Energieausweis und wird bewusst nicht verwendet.</li>
+      <li><b>Preis:</b> Es liegt keine Preisliste vor. Sujet 1.4 ist als Preis-Test vorbereitet und zeigt Platzhalter. Nur nach schriftlicher Freigabe durch Marcus Weiss einsetzen. Test: Bringt der Preis (1.4) oder das Bild (1.1) günstigere passende Leads?</li>
+      <li><b>Sonderkategorie Wohnraum</b> beim Anlegen prüfen. Begünstigter und Zahler im Werbekonto hinterlegen. Datenschutzerklärung muss vor dem Start online sein.</li>
+      <li><b>Bildmaterial:</b> Sechs Visualisierungen mit 2.000 × 1.413 px bzw. 1.413 × 2.000 px. Kein Bild zeigt Extras wie Pool oder Whirlpool. Möblierung, Küche und Bepflanzung sind Beispiele. PV und Gründach sind auf den Bildern nicht sichtbar.</li>
+    </ol>
+  </section>
+</main>
+
+<script>
+const IMG = n => `../assets/img/${n}.jpg`;
+const MARK = `<svg viewBox="0 6 96 82" aria-hidden="true"><path fill-rule="evenodd" d="M4 14H48V32H4ZM27 18H44V28H27ZM6 34H34V61.8L6 55.4ZM50 34H94V52H50ZM73 38H90V48H73ZM52 54H80V72.3L52 65.9ZM0 58 96 80V83L0 61Z"/></svg>`;
+const LOGO = `<div class="logo">${MARK}<div><b>Am Steinbach</b><small>Berggasse 17-19 · Mauerbach</small></div></div>`;
+const NB = t => t.replace(/(\d) (?=(m²|m\b|Min|Minuten|km|kWp|€|Mio|Zimmer|Gehminuten|kWh|Ebenen|Terrassen))/g, "$1 ");
+const flat = t => t.replace(/\|/g, " ");
+const TXT = a => `<h2 class="hl">${NB(a.h).replace(/\|/g, "<br>")}</h2><p class="sub">${NB(a.s)}</p><span class="anker">${a.a}</span>`;
+
+const L = {
+  L1: (a, f) => `<div class="ad f${f} L1">
+    <img class="ph main" src="${IMG(a.img)}" alt="" style="object-position:${a.pos || "center"}"><div class="veil"></div>
+    <div class="txt">${TXT(a)}</div>
+    ${a.inset ? `<img class="inset" src="${IMG(a.inset)}" alt="" style="object-position:${a.ipos || "center"}">` : ""}
+    <div class="foot">${LOGO}</div></div>`,
+  L2: (a, f) => `<div class="ad f${f} L2">
+    <img class="ph main" src="${IMG(a.img)}" alt="" style="object-position:${a.pos || "center"}">
+    <div class="field">${LOGO}${TXT(a)}</div>
+    <img class="ph sec" src="${IMG(a.img2)}" alt="" style="object-position:${a.pos2 || "center"}"></div>`,
+};
+/* Noch kein Energieausweis: Platzhalter, vor dem Start ersetzen */
+const HWB = " HWB [folgt] kWh/m²a, fGEE [folgt].";
+const VKTXT = "Verkauf durch Marcus Weiss, powered by UNIO";
+
+const BATCHES = [
+  { nr: 1, persona: "Familie", funnel: "BOF", konzept: "HausGrund", arche: "Such-Match", title: "Familie", sub: "BOF, Such-Match, Master: Einfamilienhaus bei Wien kaufen",
+    hyp: "Kaufbereite Familien suchen mit Typ und Ort. Grund, Fläche und Distanz zu Wien in der Subline beweisen, dass hier ein freistehendes Haus nah an der Stadt entsteht. Maßstab: Kosten pro passendem Lead.",
+    ads: [
+      { n: "1.1", ang: "Suchwort", lay: "L1", img: "garten-1", pos: "40% center",
+        h: "Einfamilienhaus|in Mauerbach kaufen", s: "Freistehend auf bis zu 950 m² eigenem Grund, 187 m² auf zwei Ebenen, Bus in 170 m. Wien rund 1 km.", a: "Eigener Bauplatz",
+        p: "Zwei freistehende Einfamilienhäuser in Mauerbach am Wienerwald: je 187 m² auf zwei Ebenen, eigener Bauplatz mit 930 bzw. 950 m², drei Terrassen. Die Wiener Stadtgrenze liegt rund 1 km entfernt. Pläne und Preise im Formular anfordern.", btn: "Angebot anfordern" },
+      { n: "1.2", ang: "Garten", lay: "L2", img: "terrasse", pos: "center 62%", img2: "garten-2", pos2: "center 55%",
+        h: "Haus mit Garten|bei Wien kaufen", s: "Einfamilienhaus in Mauerbach: drei Terrassen mit 92 m², Garten auf eigenem Bauplatz, Wien rund 1 km entfernt.", a: "3 Terrassen",
+        p: "Oben die Terrasse unter der Holzpergola, unten eine offene und eine überdachte Terrasse direkt an der Wiese: zusammen 92 m² je Haus. Einfamilienhäuser in Mauerbach, rund 1 km vor Wien.", btn: "Angebot anfordern" },
+      { n: "1.3", ang: "Zimmer", lay: "L1", img: "wohnraum", pos: "center 62%", inset: "garten-1", ipos: "center 45%",
+        h: "Familienhaus|in Mauerbach kaufen", s: "Bis zu 4 Zimmer zum Garten, oben Büro und 57 m² Wohnen mit Küche. Kindergarten 1,6 km, Bus 170 m.", a: "Bis 6 Zimmer",
+        p: "Platz für die ganze Familie: im Gartengeschoss bis zu vier Zimmer mit Bad und Duschbad, oben Wohnen, Küche und Essen auf 57 m² plus Büro. Kindergarten 1,6 km, Volksschule 2 km, Bus 170 m.", btn: "Angebot anfordern" },
+      { n: "1.4", ang: "Preis", lay: "L2", img: "wohnraum", pos: "center 70%", img2: "garten-1", pos2: "center 45%", price: true,
+        h: "Einfamilienhaus bei|Wien ab [Preis] €", s: "Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung.", a: "[Preis]",
+        p: "Einfamilienhaus in Mauerbach ab [Preis] €: 187 m² auf zwei Ebenen, drei Terrassen mit 92 m² und eigener Bauplatz mit 930 bzw. 950 m². Nur zwei Häuser an dieser Adresse.", btn: "Angebot anfordern" },
+      { n: "1.5", ang: "Wienerwald", lay: "L1", img: "strasse", pos: "30% center",
+        h: "Haus am Wienerwald|kaufen, 1 km vor Wien", s: "Einfamilienhaus in Mauerbach mit Lärchenfassade: Bus 170 m, Auhof Center 4,8 km, U4 Hütteldorf 7,4 km.", a: "Wien 1 km",
+        p: "Mitten im Wienerwald und trotzdem nah an der Stadt: Bus in 170 m, Wiener Stadtgrenze rund 1 km, Auhof Center mit Westautobahn rund 5 km. Zwei freistehende Einfamilienhäuser in Mauerbach.", btn: "Angebot anfordern" },
+    ] },
+  { nr: 2, persona: "Natur", funnel: "MOF", konzept: "LaercheWald", arche: "Staccato", title: "Natur", sub: "MOF, Staccato: Lärche, Wiese, Wienerwald",
+    hyp: "Postmaterielle reagieren auf belegte Natur und Nachhaltigkeit. Drei harte Punkte in der Headline, Suchwort und Zahlen in der Subline. Maßstab: Kosten pro Lead.",
+    ads: [
+      { n: "2.1", ang: "Grund", lay: "L1", img: "garten-2", pos: "60% center",
+        h: "Wiese. Wald.|950 m² Grund.", s: "Einfamilienhaus in Mauerbach kaufen: freistehend am Hang, drei Terrassen mit 92 m², Sophienalpe 2,7 km.", a: "Freistehend",
+        p: "Ein eigener Hang am Wienerwald: Bauplatz mit bis zu 950 m², das Gartengeschoss öffnet sich direkt auf die Wiese. Zwei freistehende Einfamilienhäuser in Mauerbach.", btn: "Mehr dazu" },
+      { n: "2.2", ang: "Fassade", lay: "L2", img: "strasse", pos: "30% 55%", img2: "terrasse", pos2: "center 60%",
+        h: "Lärche außen.|Licht innen.", s: "Haus am Wienerwald kaufen: Lärchenholzfassade, 3-fach-Verglasung, bodentiefe Fenster, 187 m² auf 2 Ebenen.", a: "Lärchenholz",
+        p: "Außen eine hinterlüftete Fassade aus Lärchenholz, innen bodentiefe Verglasungen und Schiebetüren zu den Terrassen. Einfamilienhäuser mit 187 m² in Mauerbach am Wienerwald.", btn: "Mehr dazu" },
+      { n: "2.3", ang: "Energie", lay: "L1", img: "terrasse", pos: "center 40%", inset: "garten-2", ipos: "center 50%",
+        h: "Wärmepumpe. Gründach.|Photovoltaik.", s: "Einfamilienhaus in Mauerbach kaufen: Fußbodenheizung, PV mit 10 bis 12 kWp geplant, 16 cm Dämmung.", a: "Gründach",
+        p: "Geplant sind eine Luft-Wasser-Wärmepumpe mit Fußbodenheizung, ein extensiv begrüntes Flachdach und eine Photovoltaikanlage mit rund 10 bis 12 kWp je Haus. Einfamilienhäuser in Mauerbach.", btn: "Mehr dazu" },
+      { n: "2.4", ang: "Wald", lay: "L1", img: "garten-1", pos: "70% center",
+        h: "Gartentür auf.|Wienerwald.", s: "Haus in Mauerbach kaufen: Kartause 1,9 km, Hohe-Wand-Wiese 1,9 km, Sophienalpe 2,7 km, Bus 170 m.", a: "Wald rundherum",
+        p: "Vom Garten in den Wienerwald: Kartause Mauerbach und Hohe-Wand-Wiese je 1,9 km, Sophienalpe 2,7 km. Zwei freistehende Einfamilienhäuser in Mauerbach.", btn: "Mehr dazu" },
+      { n: "2.5", ang: "Terrassen", lay: "L2", img: "garten-2", pos: "center 50%", img2: "wohnraum", pos2: "center 62%",
+        h: "Drei Terrassen.|Zwei Ebenen.", s: "Einfamilienhaus am Wienerwald kaufen: 36 m² mit Pergola oben, 56 m² am Garten unten, 930 bis 950 m² Grund.", a: "92 m² Terrassen",
+        p: "36,40 m² Terrasse mit Holzpergola auf Straßenniveau, darunter 26 m² offen und 30 m² überdacht direkt an der Wiese. Einfamilienhäuser in Mauerbach.", btn: "Mehr dazu" },
+    ] },
+  { nr: 3, persona: "Performer", funnel: "MOF", konzept: "Freistehend", arche: "Kategorie-Bruch", title: "Performer", sub: "MOF, Kategorie-Bruch: Raum und Abstand ohne Kompromiss",
+    hyp: "Performer reagieren, wenn die Erwartung kippt: ein ganzer Hang 1 km vor Wien, ein eigenes Büro statt Esstisch, ein Neubau ohne eigene Baustelle. Maßstab: Kosten pro passendem Lead.",
+    ads: [
+      { n: "3.1", ang: "Hang", lay: "L1", img: "garten-1", pos: "35% center",
+        h: "Ein eigener Hang,|1 km vor Wien", s: "Einfamilienhaus in Mauerbach kaufen: bis zu 950 m² eigener Grund, 187 m² Wohnen, A1 bei Auhof in 5 km.", a: "950 m² Grund",
+        p: "Ein freistehendes Haus mit eigenem Hang und trotzdem kurze Wege: Wiener Stadtgrenze rund 1 km, Auhof Center und Westautobahn rund 5 km. Einfamilienhäuser in Mauerbach.", btn: "Mehr dazu" },
+      { n: "3.2", ang: "Homeoffice", lay: "L2", img: "wohnraum", pos: "center 60%", img2: "strasse", pos2: "30% 55%",
+        h: "Ein eigenes Büro,|nicht der Esstisch", s: "Haus in Mauerbach kaufen: Büro mit 10 m² im Erdgeschoss, getrennt vom Wohnbereich mit 57 m², Bus 170 m.", a: "Büro im EG",
+        p: "Im Erdgeschoss liegt ein eigenes Büro mit rund 10 m², getrennt vom Wohn- und Essbereich, die Schlafzimmer eine Ebene tiefer. Einfamilienhäuser mit 187 m² in Mauerbach.", btn: "Mehr dazu" },
+      { n: "3.3", ang: "Neubau", lay: "L1", img: "eingang", pos: "center 55%", inset: "strasse", ipos: "30% 55%",
+        h: "Neubau, ohne|selbst zu bauen", s: "Einfamilienhaus in Mauerbach kaufen: 187 m², drei Terrassen, Wärmepumpe, bis zu 950 m² Grund. Jetzt in Planung.", a: "In Planung",
+        p: "Ein neues Haus ohne eigene Baustelle: Planung durch EUROPROJECT ZT GmbH, Ausstattung laut Bau- und Ausstattungsbeschreibung. Zwei freistehende Einfamilienhäuser in Mauerbach, jetzt in Planung.", btn: "Mehr dazu" },
+      { n: "3.4", ang: "Freistehend", lay: "L1", img: "strasse", pos: "30% center",
+        h: "Kein Reihenhaus.|Kein Doppelhaus.", s: "Freistehendes Haus in Mauerbach kaufen: eigener Bauplatz mit 930 bis 950 m², 187 m² auf zwei Ebenen.", a: "Freistehend",
+        p: "Zwei Häuser, zwei Bauplätze, Abstand zueinander: freistehende Einfamilienhäuser mit je 187 m² am Wienerwald in Mauerbach, rund 1 km vor Wien.", btn: "Mehr dazu" },
+      { n: "3.5", ang: "Baeder", lay: "L2", img: "terrasse", pos: "center 55%", img2: "garten-2", pos2: "center 50%",
+        h: "Drei Zimmer,|drei eigene Bäder", s: "Einfamilienhaus in Mauerbach kaufen: Haus 2 mit 3 Zimmern zu je 15 m², jedes mit Duschbad, 930 m² Grund.", a: "3 Duschbäder",
+        p: "In Haus 2 hat jedes der drei Zimmer im Gartengeschoss rund 15 m² und ein eigenes Duschbad. Oben Wohnen, Küche, Essen und Büro. Einfamilienhaus mit 187 m² in Mauerbach.", btn: "Mehr dazu" },
+    ] },
+];
+
+const fit = root => root.querySelectorAll(".ad .hl").forEach(el => { let fs = parseFloat(getComputedStyle(el).fontSize); while (el.scrollWidth > el.clientWidth + 1 && fs > 40) { fs -= 2; el.style.fontSize = fs + "px"; } });
+const ALL = {};
+BATCHES.forEach(b => b.ads.forEach(a => { a.b = b; ALL[a.n] = a; }));
+const render = (a, f) => L[a.lay](a, f);
+const adName = a => `${a.b.persona}_${a.b.funnel}_${a.b.konzept}_${a.ang}_Static_${a.lay}${a.inset ? "E" : ""}_V1`;
+const layName = a => a.lay === "L1" && a.inset ? "L1+" : a.lay;
+const imgName = a => a.lay === "L2" ? `oben ${a.img}, unten ${a.img2}` : a.inset ? `${a.img}, Einsatz ${a.inset}` : a.img;
+
+const params = new URLSearchParams(location.search);
+if (params.get("only")) {
+  document.body.innerHTML = render(ALL[params.get("only")], params.get("f"));
+  document.body.style.margin = "0"; document.body.style.background = "#fff";
+  document.fonts.ready.then(() => { fit(document); document.body.dataset.ready = "1"; });
+} else {
+  document.getElementById("batches").innerHTML = BATCHES.map(b => `
+    <section class="batch" id="batch-${b.nr}">
+      <div class="batch__head">
+        <span class="lbl">Batch ${b.nr} · Anzeigengruppe <span class="code">STB_Test_0${b.nr}_${b.persona}_${b.konzept}</span> · 5 Sujets · Formular Unterlagen</span>
+        <h2>${b.title} <em>${b.sub}</em></h2>
+        <p><b>Hypothese:</b> ${b.hyp}</p>
+      </div>
+      <div class="cards">${b.ads.map(a => `
+        <article class="card">
+          <div class="card__top"><h4>${a.n} · ${a.ang.replace("Baeder", "Bäder")}</h4><div class="pills"><span class="pill">${b.funnel}</span><span class="pill">${layName(a)}</span></div></div>
+          <div class="frames">
+            <div class="thumb"><button class="h45" data-id="${a.n}" data-f="45" aria-label="${a.n} in 4:5 vergrößern">${render(a, "45")}</button><span class="lbl">4:5 Feed</span></div>
+            <div class="thumb t916"><button class="h916" data-id="${a.n}" data-f="916" aria-label="${a.n} in 9:16 vergrößern">${render(a, "916")}</button><span class="lbl">9:16 Story, Reel</span></div>
+          </div>
+          <dl class="copy">
+            <div><dt>Headline</dt><dd>${flat(a.h)}</dd></div>
+            <div><dt>Subline</dt><dd>${a.s}</dd></div>
+            <div><dt>Anker</dt><dd>${a.a}${a.price ? ` <span class="flag">[Preis-Test: Preisliste fehlt, nur nach schriftlicher Freigabe durch Marcus Weiss]</span>` : ""}</dd></div>
+            <div><dt>Primärtext</dt><dd>${a.p}<span class="flag">${HWB}</span></dd></div>
+            <div><dt>Beschreibung</dt><dd>${VKTXT}</dd></div>
+            <div><dt>Button</dt><dd>${a.btn}</dd></div>
+            <div><dt>Bild</dt><dd>${imgName(a)}</dd></div>
+            <div><dt>Ad-Name</dt><dd><span class="code">${adName(a)}</span></dd></div>
+          </dl>
+        </article>`).join("")}
+      </div>
+    </section>`).join("");
+  document.fonts.ready.then(() => fit(document));
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".thumb button");
+    if (btn) openLB(btn.dataset.id, btn.dataset.f);
+    if (e.target.closest(".lb__close") || e.target.classList.contains("lb")) closeLB();
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeLB(); });
+  let last = null;
+  function openLB(id, f) {
+    last = document.activeElement;
+    const H = f === "45" ? 1350 : 1920;
+    const s = Math.min((innerWidth - 40) / 1080, (innerHeight - 90) / H);
+    const lb = document.createElement("div");
+    lb.className = "lb"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-label", `Sujet ${id} vergrößert`);
+    lb.innerHTML = `<button class="lb__close" type="button">Schließen</button><div class="lb__box" style="width:${1080 * s}px;height:${H * s}px">${render(ALL[id], f)}</div>`;
+    lb.querySelector(".ad").style.transform = `scale(${s})`;
+    document.body.appendChild(lb);
+    fit(lb);
+    lb.querySelector(".lb__close").focus();
+  }
+  function closeLB() { document.querySelector(".lb")?.remove(); last?.focus(); }
+}
+</script>

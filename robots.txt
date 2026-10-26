@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /ads/
+
+# Kurzfassung fuer KI-Assistenten: /llms.txt
+# Nach Festlegung der Domain ergaenzen: Sitemap: https://DOMAIN/sitemap.xml
