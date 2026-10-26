@@ -198,7 +198,7 @@
   }
   if (lenis) lenis.on("scroll", (e) => onScroll(e.scroll)); else window.addEventListener("scroll", () => onScroll(window.scrollY), { passive: true });
   if (hasGsap) {
-    $$(".band--forest, .footer").forEach((sec) => {
+    $$(".footer").forEach((sec) => {
       ScrollTrigger.create({ trigger: sec, start: () => `top ${headerH() * 0.6}px`, end: () => `bottom ${headerH() * 0.6}px`, onToggle: (self) => header.classList.toggle("is-light", self.isActive) });
     });
     $$("main section[id]").forEach((sec) => {
@@ -276,9 +276,6 @@
     } });
   });
 
-  /* ---------- Laufband ---------- */
-  $$("[data-band]").forEach((track) => { track.innerHTML += track.innerHTML; });
-
   /* ---------- Distanzleiste: erst einhaengen, wenn sie sichtbar sein kann, dann beim Scrollen zeichnen ---------- */
   function mountScale() {
     if (!scaleBox || scales.length) return;
@@ -328,7 +325,8 @@
   const AREA = LEVELS.eg.area + LEVELS.ug.area;
   const m2 = (v) => `${fmtNum(v, 2)}<span class="m2">m²</span>`;
   const terrTotal = TERR.eg + TERR.ug + TERR.ugc;
-  const finder = { open: 1, level: { 1: "eg", 2: "eg" } };
+  /* Tops starten eingeklappt, erst der Klick oeffnet das Detail */
+  const finder = { open: null, level: { 1: "eg", 2: "eg" } };
   const mailFor = (u) => `mailto:${CONTACT.mail}?subject=${encodeURIComponent(`Anfrage ${u.name}, Am Steinbach, Berggasse 17-19, Mauerbach`)}`;
   const priceTxt = (u) => (u.price ? `${fmtNum(u.price)} €` : "Auf Anfrage");
   /* Grundriss als Bild, sobald vorhanden (assets/plaene/haus-<n>-<ebene>.jpg plus Varianten aus tools/images.py) */

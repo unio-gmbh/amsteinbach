@@ -49,13 +49,16 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 > 9. **Widersprüche in der Bau- und Ausstattungsbeschreibung**: detaillierte BAB nennt OG und DG (Kopiervorlage), Terrassenbelag EG WPC oder Feinsteinzeug, Badewanne fix oder optional, Raffstores oder Rollläden. Lüftungsgeräte (Fensterlüfter Krobath) klären.
 > 10. **Projektname** "Am Steinbach" und Projektzeichen freigeben.
 > 11. Impressum und Datenschutz der Landingpage, Domain für Canonical, og:url und Sitemap.
-> 12. Bus-Linien und Fahrzeiten (nur Luftlinien verwendet), PV und Gründach sind auf den Renderings nicht sichtbar.
+> 12. **Aussicht vor Ort bestätigen**: Landingpage und Sujet 3.1 stützen "Weitblick" bzw. "Wienerwald-Blick" auf das Rendering der Straßenseite. Bitte mit Fotos vom Grundstück belegen.
+> 13. Bus-Linien und Fahrzeiten (nur Luftlinien verwendet), PV und Gründach sind auf den Renderings nicht sichtbar.
 
 ## Landingpage (Stand 26.10.2026)
 
+- Hero-Claim: "Wohnen mit Weitblick. Im Wienerwald zuhause." (nicht "Am Hang gebaut", Feedback 26.10.)
+- An Stelle der Laufbänder zwei Bilder in voller Breite (Straßenseite mit Blick über den Wienerwald, Gartenseite). Tops im Hausfinder starten eingeklappt. Horizontale Linien reduziert (nur Kapitel-Linie, Tabellen, FAQ).
 - Aufbau 1:1 wie Am Wolfersberg: Hero, 01 Projekt, 02 Häuser (Hausfinder mit Ebene EG/UG, Flächentabelle ohne senkrechte Striche, Preis, Status, Anfrage), 03 Lage (Distanzleiste plus Liste, mobil zweispaltig ohne Grafik), 04 Wohnen mit Grund-Feature, 05 Ausstattung mit Energie-Planungswerten, 06 Fragen (11 FAQ aus `tools/faq.py`).
 - Stärkstes Merkmal: **eigener Bauplatz mit 930 bzw. 950 m²**, Grafik im Maßstab (Bauplatz, bebaute Fläche 163,5 m², Terrasse), Maße außerhalb der Grafik.
-- CI: Headlines Cormorant Garamond 500, Text URW Gothic, Waldgrün #1d2620, Sand #ebe5da, Lärche #8a5b38. Projektzeichen: zwei auskragende Kuben am Hang.
+- CI: Headlines Cormorant Garamond 500, Text URW Gothic, Waldgrün #1d2620, Sand #ebe5da, Lärche #8a5b38. Projektzeichen: zwei auskragende Kuben über einer Geländelinie.
 - Anfragen-Button oben rechts führt zum Hausfinder, mehrere CTAs zum Finder, kein Kontaktformular.
 - Performance und SEO: Lighthouse mobil 94 (lokal mit Gzip), Accessibility, Best Practices und SEO je 100, LCP 2,4 bis 2,6 s, CLS 0. AVIF, WebP, Lazy Load, WOFF2, Minify, Meta- und OG-Tags, JSON-LD (RealEstateListing, SingleFamilyResidence, RealEstateAgent, FAQPage), llms.txt.
 
@@ -67,7 +70,7 @@ Nach der Immobilien Meta-Ads Masterstrategie, 15 Sujets in 3 Batches, je 4:5 und
 |---|---|---|---|---|
 | 1 `STB_Test_01_Familie_HausGrund` | Familie aus Wien | Performer, Konservativ-Etablierte mit Eigenmitteln | BOF, Such-Match (Master) | Freistehendes Haus auf eigenem Grund, 1 km vor Wien |
 | 2 `STB_Test_02_Natur_LaercheWald` | Natur | Postmaterielle, ergänzend Liberal-Intellektuelle | MOF, Staccato | Lärche, Wiese, Wienerwald, Wärmepumpe und PV |
-| 3 `STB_Test_03_Performer_Freistehend` | Performer | Performer, Expeditive | MOF, Kategorie-Bruch | Freistehend, mit Büro und eigenem Bad je Zimmer, ohne selbst zu bauen |
+| 3 `STB_Test_03_Performer_Freistehend` | Performer | Performer, Expeditive | MOF, Kategorie-Bruch | Wienerwald-Blick 1 km vor Wien, Büro und eigenes Bad je Zimmer, ohne selbst zu bauen |
 
 | Nr. | Layout | Bild | Headline | Subline | Anker |
 |---|---|---|---|---|---|
@@ -76,15 +79,15 @@ Nach der Immobilien Meta-Ads Masterstrategie, 15 Sujets in 3 Batches, je 4:5 und
 | 1.3 | L1+ | wohnraum, Einsatz garten-1 | Familienhaus in Mauerbach kaufen | Bis zu 4 Zimmer zum Garten, oben Büro und 57 m² Wohnen mit Küche. Kindergarten 1,6 km, Bus 170 m. | Bis 6 Zimmer |
 | 1.4 | L2 | wohnraum, garten-1 | Einfamilienhaus bei Wien ab [Preis] € | Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung. | [Preis] (Test, nur nach Freigabe) |
 | 1.5 | L1 | strasse | Haus am Wienerwald kaufen, 1 km vor Wien | Einfamilienhaus in Mauerbach mit Lärchenfassade: Bus 170 m, Auhof Center 4,8 km, U4 Hütteldorf 7,4 km. | Wien 1 km |
-| 2.1 | L1 | garten-2 | Wiese. Wald. 950 m² Grund. | Einfamilienhaus in Mauerbach kaufen: freistehend am Hang, drei Terrassen mit 92 m², Sophienalpe 2,7 km. | Freistehend |
+| 2.1 | L1 | garten-2 | Wiese. Wald. 950 m² Grund. | Einfamilienhaus in Mauerbach kaufen: freistehend, drei Terrassen mit 92 m², Sophienalpe 2,7 km, Bus 170 m. | Freistehend |
 | 2.2 | L2 | strasse, terrasse | Lärche außen. Licht innen. | Haus am Wienerwald kaufen: Lärchenholzfassade, 3-fach-Verglasung, bodentiefe Fenster, 187 m² auf 2 Ebenen. | Lärchenholz |
 | 2.3 | L1+ | terrasse, Einsatz garten-2 | Wärmepumpe. Gründach. Photovoltaik. | Einfamilienhaus in Mauerbach kaufen: Fußbodenheizung, PV mit 10 bis 12 kWp geplant, 16 cm Dämmung. | Gründach |
 | 2.4 | L1 | garten-1 | Gartentür auf. Wienerwald. | Haus in Mauerbach kaufen: Kartause 1,9 km, Hohe-Wand-Wiese 1,9 km, Sophienalpe 2,7 km, Bus 170 m. | Wald rundherum |
 | 2.5 | L2 | garten-2, wohnraum | Drei Terrassen. Zwei Ebenen. | Einfamilienhaus am Wienerwald kaufen: 36 m² mit Pergola oben, 56 m² am Garten unten, 930 bis 950 m² Grund. | 92 m² Terrassen |
-| 3.1 | L1 | garten-1 | Ein eigener Hang, 1 km vor Wien | Einfamilienhaus in Mauerbach kaufen: bis zu 950 m² eigener Grund, 187 m² Wohnen, A1 bei Auhof in 5 km. | 950 m² Grund |
+| 3.1 | L1 | strasse | Wienerwald-Blick, 1 km vor Wien | Einfamilienhaus in Mauerbach kaufen: bis zu 950 m² eigener Grund, 187 m² Wohnen, A1 bei Auhof in 5 km. | 950 m² Grund |
 | 3.2 | L2 | wohnraum, strasse | Ein eigenes Büro, nicht der Esstisch | Haus in Mauerbach kaufen: Büro mit 10 m² im Erdgeschoss, getrennt vom Wohnbereich mit 57 m², Bus 170 m. | Büro im EG |
 | 3.3 | L1+ | eingang, Einsatz strasse | Neubau, ohne selbst zu bauen | Einfamilienhaus in Mauerbach kaufen: 187 m², drei Terrassen, Wärmepumpe, bis zu 950 m² Grund. Jetzt in Planung. | In Planung |
-| 3.4 | L1 | strasse | Kein Reihenhaus. Kein Doppelhaus. | Freistehendes Haus in Mauerbach kaufen: eigener Bauplatz mit 930 bis 950 m², 187 m² auf zwei Ebenen. | Freistehend |
+| 3.4 | L1 | garten-2 | Kein Reihenhaus. Kein Doppelhaus. | Freistehendes Haus in Mauerbach kaufen: eigener Bauplatz mit 930 bis 950 m², 187 m² auf zwei Ebenen. | Freistehend |
 | 3.5 | L2 | terrasse, garten-2 | Drei Zimmer, drei eigene Bäder | Einfamilienhaus in Mauerbach kaufen: Haus 2 mit 3 Zimmern zu je 15 m², jedes mit Duschbad, 930 m² Grund. | 3 Duschbäder |
 
 Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/index.html` und im Ads-Canvas. Jeder Primärtext endet mit "HWB [folgt] kWh/m²a, fGEE [folgt]." (Platzhalter bis zum Energieausweis), Beschreibung "Verkauf durch Marcus Weiss, powered by UNIO". Test: 1.1 (Bild) gegen 1.4 (Preis), sobald Preis freigegeben.
@@ -97,7 +100,10 @@ Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/ind
 
 ## Feedback, Dos & Don'ts
 
+- 💬 Feedback (26.10.2026, Daniel): An Stelle der Textbänder Bilder über die ganze Breite. Tops im Hausfinder zuerst eingeklappt, erst beim Klick ausklappen. "Am Hang gebaut" nicht verwenden: Hang klingt mühsam, der Vorteil ist die Aussicht. Horizontale Trennlinien reduziert einsetzen. Grundrisse aus dem Drive übernehmen.
 - 💬 Feedback (23.10.2026, Daniel, aus Am Wolfersberg übernommen): Ads immer mit Bildmaterial, kein Impressumteil auf den Sujets, Anker statt Badge.
 - 💬 Feedback Landingpage (Daniel, aus Am Wolfersberg übernommen): nirgendwo Linie auf Linie; stärkstes Merkmal als eigenes Feature mit Maß außerhalb der Grafik; Flächen als kleine Tabelle ohne senkrechte Striche, nach gewähltem Geschoss; Anfragen führt zum Hausfinder; Footer-Logo gleich wie Header-Logo; mobil Lage ohne Grafik in zwei Spalten; kompakte Abschnittsabstände.
+- ✅ Do: Weitblick und Blick ins Grüne als Lagevorteil, Wohnen oben, Zimmer ebenerdig zum Garten.
 - ✅ Do: eigener Bauplatz mit 930 bzw. 950 m² als zentrales Argument, Wien rund 1 km und Bus 170 m als Lagebeweise.
+- ❌ Don't: "Hang" als Argument (klingt mühsam), Laufbänder mit Text, Linien als Standard-Trenner.
 - ❌ Don't: Energie-Vorabschätzung als Energieausweis ausgeben, Preise ohne Freigabe, interne Kostenschätzung kommunizieren, "ohne Wien zu verlassen" (Mauerbach liegt in Niederösterreich).

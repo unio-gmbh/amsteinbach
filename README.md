@@ -1,7 +1,7 @@
 # Am Steinbach, Berggasse 17-19, Mauerbach
 
 Projekt-Landingpage und Meta-Sujets für zwei freistehende Einfamilienhäuser in 3001 Mauerbach (Ortsteil Steinbach), Verkauf durch Marcus Weiss, powered by UNIO. Projektname "Am Steinbach" ist ein Vorschlag (Projekt-Branding laut Angebot 2026-180901), bitte bestätigen.
-Aufbau 1:1 nach Am Wolfersberg (Repo `Ad-Boutique/ag22`, Branch `claude/kind-gauss-2s4r1g`): nummerierte Kapitel auf Haarlinien, Headlines in Cormorant Garamond (SIL Open Font License, siehe `assets/fonts/OFL-Cormorant-Garamond.txt`), Text und Labels in URW Gothic. Farben aus den Renderings: Weiß, Putzgrau, Sand #ebe5da, Lärche #8a5b38, Waldgrün #1d2620. Projektzeichen: zwei auskragende Häuser am Hang (`assets/img/mark.svg`, Symbol `#mark` im HTML).
+Aufbau 1:1 nach Am Wolfersberg (Repo `Ad-Boutique/ag22`, Branch `claude/kind-gauss-2s4r1g`): nummerierte Kapitel auf Haarlinien, Headlines in Cormorant Garamond (SIL Open Font License, siehe `assets/fonts/OFL-Cormorant-Garamond.txt`), Text und Labels in URW Gothic. Farben aus den Renderings: Weiß, Putzgrau, Sand #ebe5da, Lärche #8a5b38, Waldgrün #1d2620. Projektzeichen: zwei auskragende Kuben über einer Geländelinie (`assets/img/mark.svg`, Symbol `#mark` im HTML).
 
 Statische Seite ohne Build-Zwang: `index.html`, `assets/css/style.css`, `assets/js/main.js`, Bibliotheken lokal unter `assets/js/vendor` (GSAP 3.12.5, ScrollTrigger, Lenis 1.1.13).
 Lokal ansehen: `python3 -m http.server` im Ordner starten und `http://localhost:8000` öffnen.
@@ -22,7 +22,7 @@ Offen vor Livegang: siehe `docs/vault/Am Steinbach.md`, Abschnitt "Offen".
 - Lage-Orte, Alltagswege und Häuser-Tabelle stehen statisch im HTML, damit Suchmaschinen und KI-Crawler sie ohne JavaScript lesen. Bei Änderungen an Preis oder Status sowohl die Tabellenzeilen in `index.html` als auch `UNITS` in `main.js` anpassen.
 - `llms.txt` fasst das Projekt für KI-Assistenten zusammen, `robots.txt` erlaubt alles außer `/ads/`.
 - `vercel.json` setzt Cache- und Sicherheits-Header.
-- Lighthouse mobil (lokal mit Gzip, 26.10.2026): Performance 94, Accessibility 100, Best Practices 100, SEO 100; LCP 2,4 bis 2,6 s, CLS 0.
+- Lighthouse mobil (lokal mit Gzip, 26.10.2026): Performance 93 bis 94, Accessibility 100, Best Practices 100, SEO 100; LCP 2,4 bis 2,6 s, CLS 0.
 
 Offen, sobald die Domain feststeht: `<link rel="canonical">`, `og:url` und absolute `og:image`-URL, `sitemap.xml` und Sitemap-Zeile in `robots.txt`, Google Search Console.
 
