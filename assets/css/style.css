@@ -336,27 +336,6 @@ ul, ol { padding: 0; list-style: none; }
 .detail__note { font-size: 0.82rem; color: var(--ink-soft); max-width: 40ch; }
 .finder__foot { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
 
-/* ---------- Grund: Bauplatz je Haus, Masse immer ausserhalb der Grafik ---------- */
-.plot { margin-top: clamp(56px, 7vw, 112px); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); row-gap: 48px; align-items: center; scroll-margin-top: 100px; }
-.plot__text { grid-column: 1 / span 5; display: grid; gap: 22px; align-content: start; }
-.plot__kicker { color: var(--ink); }
-.plot__fig { grid-column: 7 / span 6; }
-.plot__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 6px; }
-.plot__list div { padding: 0 12px 0 0; display: grid; gap: 6px; align-content: start; }
-.plot__list div + div { padding-left: 14px; border-left: 1px solid var(--line); }
-.plot__list dt { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
-.plot__list dd { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 2.5vw, 2.4rem); line-height: 1.05; letter-spacing: -0.01em; font-variant-numeric: lining-nums; }
-.plot__list dd small { font-family: var(--font); font-size: 0.4em; letter-spacing: 0; margin-left: 0.2em; color: var(--ink-soft); }
-.psvg { width: 100%; height: auto; overflow: visible; }
-.psvg__lot { fill: var(--sand-2); }
-.psvg__lotline { fill: none; stroke: var(--ink); stroke-width: 1.2; }
-.psvg__house { fill: var(--forest); }
-.psvg__terr { fill: var(--larch); opacity: 0.55; }
-.psvg__dim line { stroke: var(--forest); stroke-width: 1.2; }
-.psvg__ext { stroke: var(--stone); stroke-width: 1; stroke-dasharray: 2 4; }
-.psvg__num { font-family: var(--serif); font-weight: 500; font-size: 30px; fill: var(--forest); }
-.psvg__lbl { font-family: var(--font); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; fill: var(--stone); }
-.psvg__key { font-family: var(--font); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--ink); }
 .type__body li.is-key { color: var(--ink); }
 .type__body li.is-key span:last-child { color: var(--larch); font-weight: 600; }
 
@@ -458,7 +437,7 @@ ul, ol { padding: 0; list-style: none; }
 .media-reveal.is-in { clip-path: inset(0); transition: clip-path 1.3s var(--ease); }
 
 /* ---------- Serifen fuer Headlines und grosse Zahlen, Groteske fuer Text, Labels und Einheiten ---------- */
-.display-1, .display-2, .display-3, .fact__value, .spot__dist, .type__num, .spec-item h3, .mobile-menu a, .spot__name, .plot__num, .units > tbody > tr > td.top, .detail__pricev, .qa__item h3 {
+.display-1, .display-2, .display-3, .fact__value, .spot__dist, .type__num, .spec-item h3, .mobile-menu a, .spot__name, .units > tbody > tr > td.top, .detail__pricev, .qa__item h3 {
   font-family: var(--serif); font-weight: 500; font-variant-numeric: lining-nums proportional-nums;
 }
 .display-1 { letter-spacing: -0.015em; line-height: 0.96; }
@@ -488,7 +467,6 @@ ul, ol { padding: 0; list-style: none; }
   .finder__head .display-2, .finder__head p { grid-column: 1 / span 12; }
   .finder__head p { margin-top: 20px; }
   .detail__inner { grid-template-columns: minmax(0, 1fr); }
-  .plot__text, .plot__fig { grid-column: 1 / span 12; }
   .energy__text, .energy__side { grid-column: 1 / span 12; }
   .qa__intro, .qa__list { grid-column: 1 / span 12; }
   .qa__intro { position: static; }
@@ -562,11 +540,6 @@ ul, ol { padding: 0; list-style: none; }
   .brand__type b { font-size: 0.72rem; letter-spacing: 0.16em; }
   .brand__type b { white-space: nowrap; }
   .detail__zoom { font-size: 0.58rem; padding: 6px 9px; right: 8px; bottom: 8px; }
-  .plot__list { grid-template-columns: minmax(0, 1fr); }
-  .plot__list div, .plot__list div + div { padding: 6px 0; border-left: 0; grid-template-columns: auto auto; justify-content: space-between; align-items: baseline; }
-  .plot__list dd { font-size: 1.6rem; }
-  .psvg__num { font-size: 36px; }
-  .psvg__lbl, .psvg__key { font-size: 15px; letter-spacing: 0.08em; }
   .energy__vals { grid-template-columns: minmax(0, 1fr); }
   .energy__vals div, .energy__vals div + div { padding: 6px 0; border-left: 0; grid-template-columns: auto auto; justify-content: space-between; align-items: baseline; }
 }

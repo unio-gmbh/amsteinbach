@@ -56,8 +56,8 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 
 - Hero-Claim: "Wohnen mit Weitblick. Im Wienerwald zuhause." (nicht "Am Hang gebaut", Feedback 26.10.)
 - An Stelle der Laufbänder zwei Bilder in voller Breite (Straßenseite mit Blick über den Wienerwald, Gartenseite). Tops im Hausfinder starten eingeklappt. Horizontale Linien reduziert (nur Kapitel-Linie, Tabellen, FAQ).
-- Aufbau 1:1 wie Am Wolfersberg: Hero, 01 Projekt, 02 Häuser (Hausfinder mit Ebene EG/UG, Flächentabelle ohne senkrechte Striche, Preis, Status, Anfrage), 03 Lage (Distanzleiste plus Liste, mobil zweispaltig ohne Grafik), 04 Wohnen mit Grund-Feature, 05 Ausstattung mit Energie-Planungswerten, 06 Fragen (11 FAQ aus `tools/faq.py`).
-- Stärkstes Merkmal: **eigener Bauplatz mit 930 bzw. 950 m²**, Grafik im Maßstab (Bauplatz, bebaute Fläche 163,5 m², Terrasse), Maße außerhalb der Grafik.
+- Aufbau 1:1 wie Am Wolfersberg: Hero, 01 Projekt, 02 Häuser (Hausfinder mit Ebene EG/UG, Flächentabelle ohne senkrechte Striche, Preis, Status, Anfrage), 03 Lage (Distanzleiste plus Liste, mobil zweispaltig ohne Grafik), 04 Wohnen, 05 Ausstattung mit Energie-Planungswerten, 06 Fragen (11 FAQ aus `tools/faq.py`).
+- Stärkstes Merkmal: **eigener Bauplatz mit 930 bzw. 950 m²**, getragen über Eckdaten, Hausfinder und Copy. Der eigene Abschnitt "Grund" mit Flächengrafik wurde am 27.10.2026 auf Wunsch von Daniel entfernt.
 - CI: Headlines Cormorant Garamond 500, Text URW Gothic, Waldgrün #1d2620, Sand #ebe5da, Lärche #8a5b38. Projektzeichen: zwei auskragende Kuben über einer Geländelinie.
 - Anfragen-Button oben rechts führt zum Hausfinder, mehrere CTAs zum Finder, kein Kontaktformular.
 - Performance und SEO: Lighthouse mobil 94 (lokal mit Gzip), Accessibility, Best Practices und SEO je 100, LCP 2,4 bis 2,6 s, CLS 0. AVIF, WebP, Lazy Load, WOFF2, Minify, Meta- und OG-Tags, JSON-LD (RealEstateListing, SingleFamilyResidence, RealEstateAgent, FAQPage), llms.txt.
@@ -100,6 +100,7 @@ Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/ind
 
 ## Feedback, Dos & Don'ts
 
+- 💬 Feedback (27.10.2026, Daniel): Abschnitt "Grund" (950 m² Grund, Flächengrafik) herausnehmen.
 - ✅ 27.10.2026: Grundrisse aus dem Vorentwurf zugeordnet (Upload von Daniel), Hausfinder mit Plan je Ebene, Zoom und PDF.
 - 💬 Feedback (26.10.2026, Daniel): An Stelle der Textbänder Bilder über die ganze Breite. Tops im Hausfinder zuerst eingeklappt, erst beim Klick ausklappen. "Am Hang gebaut" nicht verwenden: Hang klingt mühsam, der Vorteil ist die Aussicht. Horizontale Trennlinien reduziert einsetzen. Grundrisse aus dem Drive übernehmen.
 - 💬 Feedback (23.10.2026, Daniel, aus Am Wolfersberg übernommen): Ads immer mit Bildmaterial, kein Impressumteil auf den Sujets, Anker statt Badge.
