@@ -21,7 +21,7 @@ Offen vor Livegang: siehe `docs/vault/Am Steinbach.md`, Abschnitt "Offen".
 - Fragen und Antworten sowie JSON-LD (RealEstateListing mit zwei SingleFamilyResidence, RealEstateAgent, FAQPage) kommen aus `tools/faq.py`: Fragen dort bearbeiten, dann `npm run faq`.
 - Lage-Orte, Alltagswege und Häuser-Tabelle stehen statisch im HTML, damit Suchmaschinen und KI-Crawler sie ohne JavaScript lesen. Bei Änderungen an Preis oder Status sowohl die Tabellenzeilen in `index.html` als auch `UNITS` in `main.js` anpassen.
 - `llms.txt` fasst das Projekt für KI-Assistenten zusammen, `robots.txt` erlaubt alles außer `/ads/`.
-- `vercel.json` setzt Cache- und Sicherheits-Header.
+- `vercel.json` setzt Cache- und Sicherheits-Header und stellt Vercel auf statische Auslieferung aus dem Projektstamm (kein Install, kein Build, Output-Verzeichnis `.`). Die minifizierten Dateien sind eingecheckt, nach Änderungen an CSS oder JS daher lokal `npm run build` ausführen und committen. `.vercelignore` hält `docs/`, `tools/` und die npm-Dateien aus dem Deployment.
 - Lighthouse mobil (lokal mit Gzip, 26.10.2026): Performance 93 bis 94, Accessibility 100, Best Practices 100, SEO 100; LCP 2,4 bis 2,6 s, CLS 0.
 
 Offen, sobald die Domain feststeht: `<link rel="canonical">`, `og:url` und absolute `og:image`-URL, `sitemap.xml` und Sitemap-Zeile in `robots.txt`, Google Search Console.
