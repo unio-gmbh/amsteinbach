@@ -309,17 +309,18 @@
   /* ---------- Hausfinder ---------- */
   /* Flaechen laut Vorentwurf EUROPROJECT ZT GmbH vom 09.09.2026 (Haus 1 = Bauplatz I, Haus 2 = Bauplatz II).
      UG Haus 1: Zimmer 4 laut Plan 16,87 m², damit 97,73 m² wie bei Haus 2 (die Flaechenaufstellung nennt 29,48 m², bitte klaeren).
-     Preis und Status vor Livegang mit dem Vertrieb bestaetigen; Grundrisse eintragen, sobald die Verkaufsplaene vorliegen. */
+     Grundrisse aus dem Vorentwurf (Seiten 01.7, 01.8, 01.11, 01.12), zugeschnitten unter assets/plaene/haus-<n>-<eg|ug>.jpg|pdf.
+     Preis und Status vor Livegang mit dem Vertrieb bestaetigen. */
   const CONTACT = { name: "Marcus Weiss", mail: "office@unio.at" }; /* Zwischenloesung, bis die E-Mail von Marcus Weiss feststeht */
-  const LEVELS = { eg: { label: "Erdgeschoss", area: 89.47, note: "Straßenseite, Terrasse 36,40 m²" }, ug: { label: "Gartengeschoss", area: 97.73, note: "Hangseite, Terrassen 26,00 und 30,00 m²" } };
+  const LEVELS = { eg: { label: "Erdgeschoss", area: 89.47, note: "Straßenseite, Terrasse 36,40 m²" }, ug: { label: "Gartengeschoss", area: 97.73, note: "Gartenseite, Terrassen 26,00 und 30,00 m²" } };
   const EG = [["Wohnen", 31.35], ["Küche, Essen", 25.90], ["Eingang", 16.95], ["Büro", 10.36], ["Garderobe", 3.41], ["WC", 1.50]];
   const UNITS = [
     { id: 1, name: "Haus 1", lot: 950, rooms: 6, baths: "1 Bad, 1 Duschbad, 2 WCs", price: null, status: "In Planung",
       rooms_: { eg: EG, ug: [["Zimmer 4", 16.87], ["Gang", 16.47], ["Zimmer 2", 12.26], ["Zimmer 3", 12.26], ["Zimmer 1", 11.86], ["Bad, WC", 8.50], ["Keller", 7.96], ["Technik", 6.39], ["Dusche, WC", 3.11], ["WC", 2.05]] },
-      plans: { eg: null, ug: null } },
+      plans: { eg: "haus-1-eg", ug: "haus-1-ug" } },
     { id: 2, name: "Haus 2", lot: 930, rooms: 5, baths: "3 Duschbäder, 1 WC", price: null, status: "In Planung",
       rooms_: { eg: EG, ug: [["Zimmer 1", 15.65], ["Zimmer 3", 15.65], ["Gang", 15.64], ["Zimmer 2", 15.31], ["Keller", 10.87], ["Keller", 7.96], ["Technik", 7.32], ["Dusche, WC 1", 3.11], ["Dusche, WC 2", 3.11], ["Dusche, WC 3", 3.11]] },
-      plans: { eg: null, ug: null } }
+      plans: { eg: "haus-2-eg", ug: "haus-2-ug" } }
   ];
   const TERR = { eg: 36.40, ug: 26.00, ugc: 30.00 };
   const AREA = LEVELS.eg.area + LEVELS.ug.area;
@@ -329,12 +330,13 @@
   const finder = { open: null, level: { 1: "eg", 2: "eg" } };
   const mailFor = (u) => `mailto:${CONTACT.mail}?subject=${encodeURIComponent(`Anfrage ${u.name}, Am Steinbach, Berggasse 17-19, Mauerbach`)}`;
   const priceTxt = (u) => (u.price ? `${fmtNum(u.price)} €` : "Auf Anfrage");
-  /* Grundriss als Bild, sobald vorhanden (assets/plaene/haus-<n>-<ebene>.jpg plus Varianten aus tools/images.py) */
+  /* Grundriss je Ebene: Varianten aus tools/images.py (assets/plaene/r/<name>-800|1400.webp|jpg), Vollbild aus dem Original */
+  const planStem = (u) => u.plans[finder.level[u.id]];
   function planHtml(u, lv) {
-    const src = u.plans[finder.level[u.id]];
-    if (!src) return `<div class="detail__plan detail__plan--empty"><div class="detail__empty"><svg viewBox="0 6 96 82" aria-hidden="true"><use href="#mark"/></svg><b>Grundriss ${lv.label} folgt</b><span>Die Verkaufspläne werden gerade ausgearbeitet. Aktueller Stand: Vorentwurf vom 09.09.2026. Gerne senden wir Ihnen die Pläne auf Anfrage.</span></div></div>`;
-    const stem = src.split("/").pop().replace(".jpg", "");
-    return `<button type="button" class="detail__plan" data-zoom="${u.id}" aria-label="Grundriss ${lv.label} von ${u.name} vergrößern"><picture><source type="image/webp" srcset="assets/plaene/r/${stem}-800.webp 800w, assets/plaene/r/${stem}-1400.webp 1400w" sizes="(max-width: 1100px) 92vw, 58vw"><img src="assets/plaene/r/${stem}-800.jpg" alt="Grundriss ${lv.label}, ${u.name}" loading="lazy" decoding="async"></picture><span class="detail__zoom">Vergrößern</span></button>`;
+    const stem = planStem(u);
+    if (!stem) return `<div class="detail__plan detail__plan--empty"><div class="detail__empty"><svg viewBox="0 6 96 82" aria-hidden="true"><use href="#mark"/></svg><b>Grundriss ${lv.label} folgt</b><span>Gerne senden wir Ihnen die Pläne auf Anfrage.</span></div></div>`;
+    const set = (ext) => `assets/plaene/r/${stem}-800.${ext} 800w, assets/plaene/r/${stem}-1400.${ext} 1400w, assets/plaene/r/${stem}-2400.${ext} 2400w`;
+    return `<button type="button" class="detail__plan" data-zoom="${u.id}" aria-label="Grundriss ${lv.label} von ${u.name} vergrößern"><picture><source type="image/webp" srcset="${set("webp")}" sizes="(max-width: 1100px) 92vw, 58vw"><img src="assets/plaene/r/${stem}-800.jpg" srcset="${set("jpg")}" sizes="(max-width: 1100px) 92vw, 58vw" width="2400" height="1800" alt="Grundriss ${lv.label}, ${u.name}" loading="lazy" decoding="async"></picture><span class="detail__zoom">Vergrößern</span></button>`;
   }
   function detailHtml(u) {
     const l = finder.level[u.id]; const lv = LEVELS[l];
@@ -342,7 +344,7 @@
       <div class="detail__plans">
         <div class="detail__tabs">
           <div class="seg" role="tablist" aria-label="Ebene von ${u.name}">${Object.keys(LEVELS).map((k) => `<button type="button" role="tab" aria-selected="${k === l}" class="${k === l ? "is-on" : ""}" data-level="${k}" data-unit="${u.id}">${k === "eg" ? "EG" : "UG"}</button>`).join("")}</div>
-          <span class="detail__cap">${lv.label}, ${lv.note}</span>
+          <span class="detail__cap">${lv.label}, ${lv.note}. Vorentwurf vom 09.09.2026, Möblierung beispielhaft</span>
         </div>
         ${planHtml(u, lv)}
       </div>
@@ -356,14 +358,16 @@
             <tr class="group"><th scope="row" colspan="2">Außen, ${u.name}</th></tr>
             ${l === "eg" ? `<tr><th scope="row">Terrasse Erdgeschoss</th><td>${fmtNum(TERR.eg, 2)} m²</td></tr>` : `<tr><th scope="row">Terrasse Gartengeschoss</th><td>${fmtNum(TERR.ug, 2)} m²</td></tr>
             <tr><th scope="row">Terrasse, überdacht</th><td>${fmtNum(TERR.ugc, 2)} m²</td></tr>`}
+            ${l === "eg" ? `<tr><th scope="row">PKW-Stellplätze</th><td>2</td></tr>` : ""}
             <tr><th scope="row">Bauplatz</th><td>${fmtNum(u.lot)} m²</td></tr>
           </tbody>
         </table>
         <p class="detail__total">Nutzfläche gesamt ${fmtNum(AREA, 2)} m² auf zwei Ebenen, ${u.rooms} Zimmer, ${u.baths}</p>
         <div class="detail__actions">
           <a class="btn" href="${mailFor(u)}">${u.name} anfragen <svg class="arr"><use href="#arrow"/></svg></a>
+          ${planStem(u) ? `<a class="textlink" href="assets/plaene/${planStem(u)}.pdf" target="_blank" rel="noopener">Plan als PDF <svg class="arr"><use href="#arrow"/></svg></a>` : ""}
         </div>
-        <p class="detail__note">Ihre Anfrage geht direkt an ${CONTACT.name}, Vertrieb powered by UNIO. Sie erhalten Pläne, Preis und Zeitplan persönlich.</p>
+        <p class="detail__note">Ihre Anfrage geht direkt an ${CONTACT.name}, Vertrieb powered by UNIO. Sie erhalten Preis, Unterlagen und Zeitplan persönlich.</p>
       </div>
     </div></td></tr>`;
   }
@@ -387,7 +391,7 @@
     const toggle = (id) => { finder.open = finder.open === id ? null : id; renderUnits(true, `tr.unit[data-unit="${id}"] .chev__btn`); };
     unitsBody.addEventListener("click", (e) => {
       const lb = e.target.closest("[data-level]"); if (lb) { finder.level[lb.dataset.unit] = lb.dataset.level; renderUnits(true, `[data-level="${lb.dataset.level}"][data-unit="${lb.dataset.unit}"]`); return; }
-      const zb = e.target.closest("[data-zoom]"); if (zb) { const u = UNITS.find((x) => x.id === +zb.dataset.zoom); openPlan(u.plans[finder.level[u.id]], `${u.name}, ${LEVELS[finder.level[u.id]].label}`); return; }
+      const zb = e.target.closest("[data-zoom]"); if (zb) { const u = UNITS.find((x) => x.id === +zb.dataset.zoom); openPlan(`assets/plaene/r/${planStem(u)}-2400.jpg`, `${u.name}, ${LEVELS[finder.level[u.id]].label}`); return; }
       const row = e.target.closest("tr.unit"); if (row) toggle(+row.dataset.unit);
     });
   }

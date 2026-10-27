@@ -8,7 +8,7 @@ Lokal ansehen: `python3 -m http.server` im Ordner starten und `http://localhost:
 
 Quellen: Vorentwurf EUROPROJECT ZT GmbH vom 09.09.2026 (Lageplan, Grundrisse EG und UG, Flächenaufstellung), Bau- und Ausstattungsbeschreibung allgemein und detailliert (19.10.2026), Kosten- und Energie-Vorabschätzung (06.10.2026), Renderings 2EFH_Mauerbach (6 Bilder). Ein Exposé, eine Preisliste, Verkaufspläne und ein Energieausweis lagen nicht vor.
 
-Hausfinder: Daten je Haus im Block `UNITS` in `assets/js/main.js` (Haus 1 = Bauplatz I, Haus 2 = Bauplatz II). Grundrisse fehlen noch: Sobald die Verkaufspläne da sind, als `assets/plaene/haus-<n>-<eg|ug>.jpg` ablegen, `npm run images` ausführen (Varianten 800 und 1400 px unter `assets/plaene/r/`) und in `UNITS[].plans` eintragen. Bis dahin zeigt der Finder einen Hinweis "Grundriss folgt". Anfragen gehen an `CONTACT.mail` (derzeit office@unio.at als Zwischenlösung).
+Hausfinder: Daten je Haus im Block `UNITS` in `assets/js/main.js` (Haus 1 = Bauplatz I, Haus 2 = Bauplatz II). Grundrisse aus dem Vorentwurf vom 09.09.2026 (Seiten 01.7, 01.8, 01.11, 01.12), einheitlich zugeschnitten unter `assets/plaene/haus-<n>-<eg|ug>.jpg`, dazu die Planseite als PDF. `npm run images` erzeugt die Varianten 800, 1400 und 2400 px unter `assets/plaene/r/`. Kommen Verkaufspläne, die Dateien gleich benannt ersetzen. Anfragen gehen an `CONTACT.mail` (derzeit office@unio.at als Zwischenlösung).
 Die Lage ist bewusst ohne Karte umgesetzt: Distanzleiste mit logarithmischem Maßstab plus Liste. Entfernungen Luftlinie ab 48.24689, 16.19405 (OpenStreetMap, Nominatim).
 
 Offen vor Livegang: siehe `docs/vault/Am Steinbach.md`, Abschnitt "Offen".

@@ -23,12 +23,12 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 |---|---|
 | Produkt | 2 freistehende Einfamilienhäuser, Neubau, Status in Planung (Vorentwurf), zwei Bauplätze aus geteiltem Grundstück (Bestand 1.875,2 m²) |
 | Bauplatz | Haus 1 (Bauplatz I) 950 m², Haus 2 (Bauplatz II) 930 m²; bebaut im EG je 163,5 m² BGF, im UG je 126 m² BGF |
-| Fläche | je 187,20 m² Nutzfläche auf zwei Ebenen: EG 89,47 m² (Straßenseite), UG bzw. Gartengeschoss 97,73 m² (Hangseite) |
+| Fläche | je 187,20 m² Nutzfläche auf zwei Ebenen: EG 89,47 m² (Straßenseite), UG bzw. Gartengeschoss 97,73 m² (Gartenseite) |
 | EG (beide gleich) | Eingang 16,95, Wohnen 31,35, Küche und Essen 25,90, Büro 10,36, Garderobe 3,41, WC 1,50 m² |
 | UG Haus 1 | Zimmer 11,86 / 12,26 / 12,26 / 16,87 m², Gang 16,47, Bad/WC 8,50, Dusche/WC 3,11, WC 2,05, Keller 7,96, Technik 6,39 m² |
 | UG Haus 2 | Zimmer 15,65 / 15,31 / 15,65 m², je eigenes Duschbad 3,11 m², Gang 15,64, Keller 7,96 und 10,87, Technik 7,32 m² |
 | Zimmer | Haus 1: 6, Haus 2: 5 (gezählt: Wohnen, Büro, Zimmer; ohne Küche und Nebenräume) |
-| Freiflächen | je Haus Terrasse EG 36,40 m² mit Holzpergola, Terrasse UG 26,00 m², überdachte Terrasse UG 30,00 m², zusammen 92,40 m²; Garten auf eigenem Bauplatz |
+| Freiflächen | je Haus 2 PKW-Stellplätze an der Straße (laut Vorentwurf), Terrasse EG 36,40 m² mit Holzpergola, Terrasse UG 26,00 m², überdachte Terrasse UG 30,00 m², zusammen 92,40 m²; Garten auf eigenem Bauplatz |
 | Bauweise | EG Hochlochziegel (Porotherm) mit 16 cm Dämmung und hinterlüfteter Lärchenholzfassade, UG Stahlbeton gedämmt und grau verputzt, extensiv begrüntes Flachdach, lichte Höhe ca. 2,75 m |
 | Ausstattung | Holz-Alu-Fenster 3-fach, bodentiefe Verglasungen, Schiebetüren, elektrische Außenjalousien, Eiche Landhausdiele geölt, Feinsteinzeug 60 × 60, Laufen, Grohe, Geberit, bodenebene Duschen, Haustür und EG-Fenster WK 3, Glasbrüstungen, Glasvordach |
 | Technik | Luft-Wasser-Wärmepumpe mit Fußbodenheizung, PV ca. 10 bis 12 kWp je Haus vorgesehen, keine Wohnraumlüftung (Fensterlüftung) |
@@ -38,9 +38,9 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 | Budget | Angebot 2026-180901 (unterfertigt): Performance Marketing 800 € netto pro Monat, empfohlener Ad Spend ab 1.000 € pro Monat; einmalig Branding, Landingpage, Videos, Flyer, Banner |
 
 > [!warning] Offen
-> 1. **Grundrisse**: Die Plan-PDF im Drive (Vorentwurf, 21 MB) übersteigt das Connector-Limit von 10 MB. Bitte Grundrisse EG und UG je Haus als JPG/PNG oder kleineres PDF ablegen. Der Hausfinder zeigt bis dahin "Grundriss folgt".
+> 1. **Grundrisse**: erledigt (27.10.2026). Aus dem Vorentwurf übernommen, Seiten 01.7 und 01.8 (Haus 1, Bauplatz I) sowie 01.11 und 01.12 (Haus 2, Bauplatz II), als Bild und PDF je Ebene im Hausfinder.
 > 2. **Verkaufspläne**: Es gibt nur den Vorentwurf. Flächen vor Livegang gegen Verkaufspläne prüfen.
-> 3. **Flächenwiderspruch Haus 1**: Plan nennt Zimmer 4 mit 16,87 m², die Flächenaufstellung 29,48 m² (UG 110,34, gesamt 199,81 m²). Umgesetzt: 16,87 m², damit UG 97,73 m² wie bei Haus 2 (gleiche BGF). Kostenschätzung nennt wieder andere NRF-Werte für das UG (81,26 bzw. 82,09 m²). Bitte vom Planer bestätigen.
+> 3. **Flächenwiderspruch Haus 1**: Der Grundriss bestätigt Zimmer 4 mit 16,87 m² (UG 97,73 m², gesamt 187,20 m²). Die Flächenaufstellung (29,48 m², 199,81 m²) ist damit vermutlich ein Tippfehler. Planer kurz bestätigen lassen.
 > 4. **Preise und Status** je Haus vom Vertrieb, mit Freigabe für den Preis-Test 1.4.
 > 5. **Energieausweis** (HWB, fGEE, Klasse, Gültigkeit) für Primärtexte, Landingpage und Pflichtangaben nach EAVG. Primärtexte enthalten Platzhalter.
 > 6. **Kontakt Marcus Weiss**: E-Mail, Telefon, Funktion, Firmenname. Anfrage-Button geht zwischenzeitlich an office@unio.at.
@@ -100,6 +100,7 @@ Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/ind
 
 ## Feedback, Dos & Don'ts
 
+- ✅ 27.10.2026: Grundrisse aus dem Vorentwurf zugeordnet (Upload von Daniel), Hausfinder mit Plan je Ebene, Zoom und PDF.
 - 💬 Feedback (26.10.2026, Daniel): An Stelle der Textbänder Bilder über die ganze Breite. Tops im Hausfinder zuerst eingeklappt, erst beim Klick ausklappen. "Am Hang gebaut" nicht verwenden: Hang klingt mühsam, der Vorteil ist die Aussicht. Horizontale Trennlinien reduziert einsetzen. Grundrisse aus dem Drive übernehmen.
 - 💬 Feedback (23.10.2026, Daniel, aus Am Wolfersberg übernommen): Ads immer mit Bildmaterial, kein Impressumteil auf den Sujets, Anker statt Badge.
 - 💬 Feedback Landingpage (Daniel, aus Am Wolfersberg übernommen): nirgendwo Linie auf Linie; stärkstes Merkmal als eigenes Feature mit Maß außerhalb der Grafik; Flächen als kleine Tabelle ohne senkrechte Striche, nach gewähltem Geschoss; Anfragen führt zum Hausfinder; Footer-Logo gleich wie Header-Logo; mobil Lage ohne Grafik in zwei Spalten; kompakte Abschnittsabstände.

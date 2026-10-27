@@ -9,6 +9,7 @@
 - Gartengeschoss Haus 2: drei Zimmer (15,31 bis 15,65 m²) mit je eigenem Duschbad, zwei Keller, Technik
 - Terrassen: 36,40 m² im Erdgeschoss mit Holzpergola, 26,00 m² und 30,00 m² überdacht im Gartengeschoss
 - Bauplatz: rund 950 m² (Haus 1) und 930 m² (Haus 2), bebaut im Erdgeschoss je 163,5 m²
+- Stellplätze: 2 PKW-Stellplätze je Haus an der Straße (laut Vorentwurf)
 - Kaufpreis: auf Anfrage beim Vertrieb
 - Bauweise: Erdgeschoss Hochlochziegel mit 16 cm Dämmung und hinterlüfteter Lärchenholzfassade, Gartengeschoss Stahlbeton, extensiv begrüntes Flachdach, Holz-Alu-Fenster mit 3-fach-Verglasung
 - Technik: Luft-Wasser-Wärmepumpe, Fußbodenheizung, Photovoltaik mit rund 10 bis 12 kWp je Haus vorgesehen
@@ -28,4 +29,8 @@
 - Planung: EUROPROJECT ZT GmbH, Capistrangasse 5/2/61, 1060 Wien
 
 ## Seiten
-- [Projektseite mit Hausfinder, Flächen je Ebene und Fragen und Antworten](./index.html)
+- [Projektseite mit Hausfinder, Grundrissen je Ebene und Fragen und Antworten](./index.html)
+- [Grundriss Haus 1, Erdgeschoss (PDF)](./assets/plaene/haus-1-eg.pdf)
+- [Grundriss Haus 1, Gartengeschoss (PDF)](./assets/plaene/haus-1-ug.pdf)
+- [Grundriss Haus 2, Erdgeschoss (PDF)](./assets/plaene/haus-2-eg.pdf)
+- [Grundriss Haus 2, Gartengeschoss (PDF)](./assets/plaene/haus-2-ug.pdf)
