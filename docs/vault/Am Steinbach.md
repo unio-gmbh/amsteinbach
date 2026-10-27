@@ -33,7 +33,7 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 | Ausstattung | Holz-Alu-Fenster 3-fach, bodentiefe Verglasungen, Schiebetüren, elektrische Außenjalousien, Eiche Landhausdiele geölt, Feinsteinzeug 60 × 60, Laufen, Grohe, Geberit, bodenebene Duschen, Haustür und EG-Fenster WK 3, Glasbrüstungen, Glasvordach |
 | Technik | Luft-Wasser-Wärmepumpe mit Fußbodenheizung, PV ca. 10 bis 12 kWp je Haus vorgesehen, keine Wohnraumlüftung (Fensterlüftung) |
 | Energie | kein Energieausweis. Vorabschätzung Planer: HWB ca. 24 bis 27 kWh/m²a, fGEE ca. 0,50 bis 0,56 (nur Planungswerte) |
-| Preis | keine Preisliste. Kostenschätzung des Planers (intern, nicht kommunizieren): Gesamtkosten ca. 1,84 Mio. € netto je Haus inkl. 500.000 € Grund |
+| Preis | 1.900.000 € je Haus (Angabe Daniel, 27.10.2026), zuzüglich Nebenkosten. Ausbaustufe im Kaufpreis offen. Kostenschätzung des Planers (intern, nicht kommunizieren): Gesamtkosten ca. 1,84 Mio. € netto je Haus inkl. 500.000 € Grund |
 | Lage (Luftlinie ab 48.24689, 16.19405) | Bus Steinbach Berggasse 170 m, Wiener Stadtgrenze (Trollwiese, 1140) 1,1 km, Apotheke 1,5 km, Kindergarten 1,6 km, Kartause Mauerbach 1,9 km, Hohe-Wand-Wiese 1,9 km, Billa und Volksschule 2,0 km, Sophienalpe 2,7 km, Bahnhof Unter Purkersdorf 4,4 km, Auhof Center 4,8 km, A1 Auhof 5,2 km, U4 Hütteldorf 7,4 km, Stephansdom 14 km |
 | Budget | Angebot 2026-180901 (unterfertigt): Performance Marketing 800 € netto pro Monat, empfohlener Ad Spend ab 1.000 € pro Monat; einmalig Branding, Landingpage, Videos, Flyer, Banner |
 
@@ -41,7 +41,7 @@ Zwei freistehende Einfamilienhäuser in der Berggasse 17-19, 3001 Mauerbach (Ort
 > 1. **Grundrisse**: erledigt (27.10.2026). Aus dem Vorentwurf übernommen, Seiten 01.7 und 01.8 (Haus 1, Bauplatz I) sowie 01.11 und 01.12 (Haus 2, Bauplatz II), als Bild und PDF je Ebene im Hausfinder.
 > 2. **Verkaufspläne**: Es gibt nur den Vorentwurf. Flächen vor Livegang gegen Verkaufspläne prüfen.
 > 3. **Flächenwiderspruch Haus 1**: Der Grundriss bestätigt Zimmer 4 mit 16,87 m² (UG 97,73 m², gesamt 187,20 m²). Die Flächenaufstellung (29,48 m², 199,81 m²) ist damit vermutlich ein Tippfehler. Planer kurz bestätigen lassen.
-> 4. **Preise und Status** je Haus vom Vertrieb, mit Freigabe für den Preis-Test 1.4.
+> 4. **Preis**: 1.900.000 € je Haus eingetragen (27.10.2026). Offen: schriftliche Freigabe von Marcus Weiss für den Preis in Anzeigen (Sujet 1.4), Ausbaustufe und Nebenkosten (Provision?), Status je Haus.
 > 5. **Energieausweis** (HWB, fGEE, Klasse, Gültigkeit) für Primärtexte, Landingpage und Pflichtangaben nach EAVG. Primärtexte enthalten Platzhalter.
 > 6. **Kontakt Marcus Weiss**: E-Mail, Telefon, Funktion, Firmenname. Anfrage-Button geht zwischenzeitlich an office@unio.at.
 > 7. **Zuordnung** Haus 1 und Haus 2 zu Berggasse 17 und 19 bzw. links und rechts von der Straße.
@@ -77,7 +77,7 @@ Nach der Immobilien Meta-Ads Masterstrategie, 15 Sujets in 3 Batches, je 4:5 und
 | 1.1 | L1 | garten-1 | Einfamilienhaus in Mauerbach kaufen | Freistehend auf bis zu 950 m² eigenem Grund, 187 m² auf zwei Ebenen, Bus in 170 m. Wien rund 1 km. | Eigener Bauplatz |
 | 1.2 | L2 | terrasse, garten-2 | Haus mit Garten bei Wien kaufen | Einfamilienhaus in Mauerbach: drei Terrassen mit 92 m², Garten auf eigenem Bauplatz, Wien rund 1 km entfernt. | 3 Terrassen |
 | 1.3 | L1+ | wohnraum, Einsatz garten-1 | Familienhaus in Mauerbach kaufen | Bis zu 4 Zimmer zum Garten, oben Büro und 57 m² Wohnen mit Küche. Kindergarten 1,6 km, Bus 170 m. | Bis 6 Zimmer |
-| 1.4 | L2 | wohnraum, garten-1 | Einfamilienhaus bei Wien ab [Preis] € | Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung. | [Preis] (Test, nur nach Freigabe) |
+| 1.4 | L2 | wohnraum, garten-1 | Einfamilienhaus bei Wien unter 2 Mio. € | Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung. | 1.900.000 € (Test, Freigabe Vertrieb einholen) |
 | 1.5 | L1 | strasse | Haus am Wienerwald kaufen, 1 km vor Wien | Einfamilienhaus in Mauerbach mit Lärchenfassade: Bus 170 m, Auhof Center 4,8 km, U4 Hütteldorf 7,4 km. | Wien 1 km |
 | 2.1 | L1 | garten-2 | Wiese. Wald. 950 m² Grund. | Einfamilienhaus in Mauerbach kaufen: freistehend, drei Terrassen mit 92 m², Sophienalpe 2,7 km, Bus 170 m. | Freistehend |
 | 2.2 | L2 | strasse, terrasse | Lärche außen. Licht innen. | Haus am Wienerwald kaufen: Lärchenholzfassade, 3-fach-Verglasung, bodentiefe Fenster, 187 m² auf 2 Ebenen. | Lärchenholz |
@@ -90,7 +90,7 @@ Nach der Immobilien Meta-Ads Masterstrategie, 15 Sujets in 3 Batches, je 4:5 und
 | 3.4 | L1 | garten-2 | Kein Reihenhaus. Kein Doppelhaus. | Freistehendes Haus in Mauerbach kaufen: eigener Bauplatz mit 930 bis 950 m², 187 m² auf zwei Ebenen. | Freistehend |
 | 3.5 | L2 | terrasse, garten-2 | Drei Zimmer, drei eigene Bäder | Einfamilienhaus in Mauerbach kaufen: Haus 2 mit 3 Zimmern zu je 15 m², jedes mit Duschbad, 930 m² Grund. | 3 Duschbäder |
 
-Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/index.html` und im Ads-Canvas. Jeder Primärtext endet mit "HWB [folgt] kWh/m²a, fGEE [folgt]." (Platzhalter bis zum Energieausweis), Beschreibung "Verkauf durch Marcus Weiss, powered by UNIO". Test: 1.1 (Bild) gegen 1.4 (Preis), sobald Preis freigegeben.
+Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/index.html` und im Ads-Canvas. Jeder Primärtext endet mit "HWB [folgt] kWh/m²a, fGEE [folgt]." (Platzhalter bis zum Energieausweis), Beschreibung "Verkauf durch Marcus Weiss, powered by UNIO". Test: 1.1 (Bild) gegen 1.4 (Preis, 1.900.000 €), sobald der Vertrieb den Preis für Anzeigen freigibt.
 
 ## Learnings für die Vorlage
 
@@ -100,6 +100,7 @@ Primärtexte, Beschreibung, Buttons und Ad-Namen stehen vollständig in `ads/ind
 
 ## Feedback, Dos & Don'ts
 
+- ✅ 27.10.2026: Kaufpreis 1.900.000 € je Haus auf Landingpage, FAQ, JSON-LD, llms.txt und in Sujet 1.4.
 - 💬 Feedback (27.10.2026, Daniel): Abschnitt "Grund" (950 m² Grund, Flächengrafik) herausnehmen.
 - ✅ 27.10.2026: Grundrisse aus dem Vorentwurf zugeordnet (Upload von Daniel), Hausfinder mit Plan je Ebene, Zoom und PDF.
 - 💬 Feedback (26.10.2026, Daniel): An Stelle der Textbänder Bilder über die ganze Breite. Tops im Hausfinder zuerst eingeklappt, erst beim Klick ausklappen. "Am Hang gebaut" nicht verwenden: Hang klingt mühsam, der Vorteil ist die Aussicht. Horizontale Trennlinien reduziert einsetzen. Grundrisse aus dem Drive übernehmen.

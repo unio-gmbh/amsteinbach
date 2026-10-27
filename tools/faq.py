@@ -22,7 +22,7 @@ FAQ = [
     ("Welche Freiflächen gibt es?",
      "Jedes Haus hat drei Terrassen: 36,40 m² im Erdgeschoss mit Holzpergola, 26,00 m² und eine überdachte Terrasse mit 30,00 m² im Gartengeschoss. Dazu kommen der Garten auf dem eigenen Bauplatz mit rund 930 bzw. 950 m² und laut Vorentwurf zwei PKW-Stellplätze an der Straße. Bebaut sind davon im Erdgeschoss 163,5 m², also weniger als ein Fünftel."),
     ("Was kostet ein Haus?",
-     "Die Kaufpreise nennt Ihnen der Vertrieb, Marcus Weiss, powered by UNIO, gerne persönlich. Am schnellsten fragen Sie das gewünschte Haus direkt im Hausfinder auf dieser Seite an."),
+     "Der Kaufpreis beträgt 1.900.000 € je Haus, zuzüglich Nebenkosten wie Grunderwerbsteuer und Grundbucheintragungsgebühr. Details zu Ausbaustufe und Zahlungsplan nennt Ihnen der Vertrieb, Marcus Weiss, powered by UNIO. Am schnellsten fragen Sie das gewünschte Haus direkt im Hausfinder auf dieser Seite an."),
     ("Wann sind die Häuser bezugsfertig?",
      "Die Häuser sind in Planung, aktuell liegt der Vorentwurf vom 09.09.2026 vor. Den Zeitplan für Einreichung, Bau und Übergabe erhalten Sie mit Ihrer Anfrage vom Vertrieb."),
     ("Wie werden die Häuser gebaut?",
@@ -34,7 +34,7 @@ FAQ = [
     ("Wie komme ich von Mauerbach nach Wien?",
      "Die Bushaltestelle Steinbach Berggasse liegt rund 170 m vom Haus entfernt. Bis zur Wiener Stadtgrenze bei der Trollwiese sind es rund 1,1 km, bis zum Auhof Center und zur Auffahrt auf die Westautobahn A1 rund 5 km und bis zur U4-Endstation Hütteldorf rund 7,4 km, jeweils Luftlinie."),
     ("Wer verkauft die Häuser und wie frage ich an?",
-     "Der Verkauf erfolgt durch Marcus Weiss, powered by UNIO. Am schnellsten fragen Sie das gewünschte Haus direkt im Hausfinder auf dieser Seite an: Sie erhalten Pläne, Kaufpreis und Zeitplan persönlich."),
+     "Der Verkauf erfolgt durch Marcus Weiss, powered by UNIO. Am schnellsten fragen Sie das gewünschte Haus direkt im Hausfinder auf dieser Seite an: Sie erhalten Unterlagen und Zeitplan persönlich."),
 ]
 
 ADDRESS = {"@type": "PostalAddress", "streetAddress": "Berggasse 17-19", "postalCode": "3001", "addressLocality": "Mauerbach", "addressRegion": "Niederösterreich", "addressCountry": "AT"}
@@ -66,7 +66,7 @@ def ld():
                "datePosted": "2026-10-26", "inLanguage": "de-AT",
                "image": ["assets/img/og-image.jpg", "assets/img/r/garten-1-1680.jpg", "assets/img/r/strasse-1680.jpg"],
                "about": [house(1, 950, 6), house(2, 930, 5)],
-               "offers": [{"@type": "Offer", "name": f"Haus {n}", "availability": "https://schema.org/PreSale",
+               "offers": [{"@type": "Offer", "name": f"Haus {n}", "price": 1900000, "priceCurrency": "EUR", "availability": "https://schema.org/PreSale",
                            "itemOffered": {"@id": f"#haus-{n}"}, "seller": {"@id": "#vertrieb"}} for n in (1, 2)]}
     faq = {"@type": "FAQPage", "@id": "#fragen", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     return {"@context": "https://schema.org", "@graph": [listing, seller, faq]}

@@ -189,7 +189,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; text-wrap: balance; ma
       <li><b>Kampagne:</b> eine Testing-Kampagne mit Advantage-Kampagnenbudget, je Batch eine Anzeigengruppe mit 5 Sujets, breit (Advantage+ Zielgruppe), Wien und 40 km um Mauerbach. Gewinner bleiben, Verlierer nach 14 Tagen raus. Batch 1 startet zuerst, weil der Master Lead-Signal liefert.</li>
       <li><b>Budget:</b> Laut Angebot 2026-180901 empfohlener Ad Spend ab 1.000 € pro Monat, damit läuft ein Batch zur Zeit im 14-Tage-Takt. Ziel-CPA nach 4 Wochen aus den eigenen Daten.</li>
       <li><b>Energieausweis:</b> Es gibt noch keinen. Die Primärtexte enden mit dem Platzhalter „HWB [folgt] kWh/m²a, fGEE [folgt].“ Vor dem Start die Werte aus dem Energieausweis eintragen. Die Vorabschätzung des Planers (HWB ca. 24 bis 27, fGEE ca. 0,50 bis 0,56) ist kein Energieausweis und wird bewusst nicht verwendet.</li>
-      <li><b>Preis:</b> Es liegt keine Preisliste vor. Sujet 1.4 ist als Preis-Test vorbereitet und zeigt Platzhalter. Nur nach schriftlicher Freigabe durch Marcus Weiss einsetzen. Test: Bringt der Preis (1.4) oder das Bild (1.1) günstigere passende Leads?</li>
+      <li><b>Preis:</b> 1.900.000 € je Haus (Angabe 27.10.2026). Sujet 1.4 nutzt den Preis als Preis-Schwelle „unter 2 Mio. €“, Anker 1.900.000 €. Vor dem Start die schriftliche Freigabe von Marcus Weiss für den Preis in Anzeigen einholen. Test: Bringt der Preis (1.4) oder das Bild (1.1) günstigere passende Leads?</li>
       <li><b>Sonderkategorie Wohnraum</b> beim Anlegen prüfen. Begünstigter und Zahler im Werbekonto hinterlegen. Datenschutzerklärung muss vor dem Start online sein.</li>
       <li><b>Bildmaterial:</b> Sechs Visualisierungen mit 2.000 × 1.413 px bzw. 1.413 × 2.000 px. Kein Bild zeigt Extras wie Pool oder Whirlpool. Möblierung, Küche und Bepflanzung sind Beispiele. PV und Gründach sind auf den Bildern nicht sichtbar.</li>
     </ol>
@@ -233,8 +233,8 @@ const BATCHES = [
         h: "Familienhaus|in Mauerbach kaufen", s: "Bis zu 4 Zimmer zum Garten, oben Büro und 57 m² Wohnen mit Küche. Kindergarten 1,6 km, Bus 170 m.", a: "Bis 6 Zimmer",
         p: "Platz für die ganze Familie: im Gartengeschoss bis zu vier Zimmer mit Bad und Duschbad, oben Wohnen, Küche und Essen auf 57 m² plus Büro. Kindergarten 1,6 km, Volksschule 2 km, Bus 170 m.", btn: "Angebot anfordern" },
       { n: "1.4", ang: "Preis", lay: "L2", img: "wohnraum", pos: "center 70%", img2: "garten-1", pos2: "center 45%", price: true,
-        h: "Einfamilienhaus bei|Wien ab [Preis] €", s: "Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung.", a: "[Preis]",
-        p: "Einfamilienhaus in Mauerbach ab [Preis] €: 187 m² auf zwei Ebenen, drei Terrassen mit 92 m² und eigener Bauplatz mit 930 bzw. 950 m². Nur zwei Häuser an dieser Adresse.", btn: "Angebot anfordern" },
+        h: "Einfamilienhaus bei|Wien unter 2 Mio. €", s: "Freistehend in Mauerbach kaufen: 187 m², drei Terrassen, eigener Bauplatz mit bis zu 950 m², jetzt in Planung.", a: "1.900.000 €",
+        p: "Einfamilienhaus in Mauerbach um 1.900.000 €: 187 m² auf zwei Ebenen, drei Terrassen mit 92 m² und eigener Bauplatz mit 930 bzw. 950 m². Nur zwei Häuser an dieser Adresse.", btn: "Angebot anfordern" },
       { n: "1.5", ang: "Wienerwald", lay: "L1", img: "strasse", pos: "30% center",
         h: "Haus am Wienerwald|kaufen, 1 km vor Wien", s: "Einfamilienhaus in Mauerbach mit Lärchenfassade: Bus 170 m, Auhof Center 4,8 km, U4 Hütteldorf 7,4 km.", a: "Wien 1 km",
         p: "Mitten im Wienerwald und trotzdem nah an der Stadt: Bus in 170 m, Wiener Stadtgrenze rund 1 km, Auhof Center mit Westautobahn rund 5 km. Zwei freistehende Einfamilienhäuser in Mauerbach.", btn: "Angebot anfordern" },
@@ -310,7 +310,7 @@ if (params.get("only")) {
           <dl class="copy">
             <div><dt>Headline</dt><dd>${flat(a.h)}</dd></div>
             <div><dt>Subline</dt><dd>${a.s}</dd></div>
-            <div><dt>Anker</dt><dd>${a.a}${a.price ? ` <span class="flag">[Preis-Test: Preisliste fehlt, nur nach schriftlicher Freigabe durch Marcus Weiss]</span>` : ""}</dd></div>
+            <div><dt>Anker</dt><dd>${a.a}${a.price ? ` <span class="flag">[Preis-Test: 1.900.000 € je Haus, vor dem Start schriftliche Freigabe von Marcus Weiss für den Preis in Anzeigen einholen]</span>` : ""}</dd></div>
             <div><dt>Primärtext</dt><dd>${a.p}<span class="flag">${HWB}</span></dd></div>
             <div><dt>Beschreibung</dt><dd>${VKTXT}</dd></div>
             <div><dt>Button</dt><dd>${a.btn}</dd></div>

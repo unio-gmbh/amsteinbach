@@ -315,10 +315,10 @@
   const LEVELS = { eg: { label: "Erdgeschoss", area: 89.47, note: "Straßenseite, Terrasse 36,40 m²" }, ug: { label: "Gartengeschoss", area: 97.73, note: "Gartenseite, Terrassen 26,00 und 30,00 m²" } };
   const EG = [["Wohnen", 31.35], ["Küche, Essen", 25.90], ["Eingang", 16.95], ["Büro", 10.36], ["Garderobe", 3.41], ["WC", 1.50]];
   const UNITS = [
-    { id: 1, name: "Haus 1", lot: 950, rooms: 6, baths: "1 Bad, 1 Duschbad, 2 WCs", price: null, status: "In Planung",
+    { id: 1, name: "Haus 1", lot: 950, rooms: 6, baths: "1 Bad, 1 Duschbad, 2 WCs", price: 1900000, status: "In Planung",
       rooms_: { eg: EG, ug: [["Zimmer 4", 16.87], ["Gang", 16.47], ["Zimmer 2", 12.26], ["Zimmer 3", 12.26], ["Zimmer 1", 11.86], ["Bad, WC", 8.50], ["Keller", 7.96], ["Technik", 6.39], ["Dusche, WC", 3.11], ["WC", 2.05]] },
       plans: { eg: "haus-1-eg", ug: "haus-1-ug" } },
-    { id: 2, name: "Haus 2", lot: 930, rooms: 5, baths: "3 Duschbäder, 1 WC", price: null, status: "In Planung",
+    { id: 2, name: "Haus 2", lot: 930, rooms: 5, baths: "3 Duschbäder, 1 WC", price: 1900000, status: "In Planung",
       rooms_: { eg: EG, ug: [["Zimmer 1", 15.65], ["Zimmer 3", 15.65], ["Gang", 15.64], ["Zimmer 2", 15.31], ["Keller", 10.87], ["Keller", 7.96], ["Technik", 7.32], ["Dusche, WC 1", 3.11], ["Dusche, WC 2", 3.11], ["Dusche, WC 3", 3.11]] },
       plans: { eg: "haus-2-eg", ug: "haus-2-ug" } }
   ];
